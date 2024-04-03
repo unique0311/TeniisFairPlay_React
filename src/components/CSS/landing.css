@@ -1,0 +1,89 @@
+nav {
+  background-color: #fff;
+  height: 88px;
+  width: 100%;
+  position: fixed;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "open-Sans";
+  font-size: 12px;
+}
+
+nav.scrolled {
+  height: 44px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logoImage__setting {
+  width: 57px;
+  height: 57px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.logoImage__setting__small {
+  width: 28.5px;
+  height: 28.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
+.Navbar__lists {
+  display: flex;
+  flex-direction: row;
+}
+
+.list__setting__basic {
+  margin-right: 12px;
+  margin-left: 12px;
+  margin-top: 0px;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #444444;
+}
+
+.list__setting__basic:hover {
+  box-shadow: inset 0 2px 0 0 #27850e;
+  transition: all 0.3s ease;
+}
+
+.scale__active {
+  box-shadow: inset 0 2px 0 0 #27850e;
+}
+
+.list__setting {
+  height: 88px;
+}
+
+.list__setting__small {
+  height: 44px;
+}
+
+.Footer__container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  background-color: aqua;
+}
+
+.Main__container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: azure;
+}
