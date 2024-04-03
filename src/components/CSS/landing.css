@@ -5,9 +5,9 @@ nav {
   position: fixed;
   transition: all 0.3s ease;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  font-family: "open-Sans";
+  font-family: "open-Sans-bold";
   font-size: 12px;
 }
 
@@ -17,15 +17,13 @@ nav.scrolled {
 }
 
 .logoImage__setting {
-  width: 57px;
-  height: 57px;
+  height: 88px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .logoImage__setting__small {
-  width: 28.5px;
-  height: 28.5px;
+  height: 44px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -35,9 +33,11 @@ nav.scrolled {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding-left: 4%;
-  padding-right: 4%;
+  transition: all 0.3s ease;
+  width: 1280px;
+  /* width: 100%;
+  padding-left: 17%;
+  padding-right: 17%; */
 }
 
 .Navbar__lists {
@@ -77,13 +77,70 @@ nav.scrolled {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100px;
-  background-color: aqua;
+  height: 60px;
+  background-color: #171717;
+  align-items: center;
+  justify-content: center;
+  color: #515151;
+  font-size: 13px;
+  font-family: "open-Sans-bold";
+  letter-spacing: 1px;
 }
 
 .Main__container {
   display: flex;
   width: 100%;
   flex-direction: column;
-  background-color: azure;
+  background-color: #fff;
+}
+
+.scrollToTop__container {
+  position: fixed;
+  right: 0;
+  bottom: 2%;
+  background-color: #00000033;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.scrollToTop__container:hover {
+  background-color: #00000055;
+}
+
+.scrollToTop__container.visible {
+  transition: all 0.3s ease;
+  right: 2%;
+}
+
+.scrollToTop__container.invisible {
+  transition: all 0.3s ease;
+  right: -2%;
+}
+
+.upImage__setting {
+  width: 24px;
+  height: 24px;
+  padding: 12px 14px;
+}
+
+@media (max-width: 1350px) {
+  .nav__container {
+    width: 1170px;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 1230px) {
+  .nav__container {
+    transition: all 0.3s ease;
+    width: 970px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .nav__container {
+    transition: all 0.3s ease;
+    width: 870px;
+  }
 }

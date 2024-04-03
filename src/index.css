@@ -12,8 +12,32 @@ code {
     monospace;
 }
 
+.App__container {
+  position: relative;
+}
+
 @font-face {
   font-family: "open-Sans";
   src: local("open-Sans"),
     url(../src/fonts/Open_Sans/static/OpenSans-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "open-Sans-bold";
+  src: local("open-Sans-bold"),
+    url(../src/fonts/Open_Sans/static/OpenSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto_Condensed";
+  src: local("Roboto_Condensed"),
+    url(../src/fonts/Roboto_Condensed/static/RobotoCondensed-Regular.ttf)
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto_Condensed_Light";
+  src: local("Roboto_Condensed_Light"),
+    url(../src/fonts/Roboto_Condensed/static/RobotoCondensed-Light.ttf)
+      format("truetype");
 }

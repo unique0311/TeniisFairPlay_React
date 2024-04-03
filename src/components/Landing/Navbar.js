@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../CSS/landing.css";
 
-import logoImage from "../../assets/logo.png";
+import logoImage from "../../assets/Site-Logo.png";
 
 const Navbar = () => {
   const [isShrunk, setIsShrunk] = useState(false);

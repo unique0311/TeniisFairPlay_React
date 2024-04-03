@@ -4,19 +4,230 @@
   width: 100%;
   height: 100%;
   margin-top: 88px;
+  justify-content: center;
+  align-items: center;
 }
 
 .semiHeader__container {
-  display: flex;
-  flex-direction: row;
   width: 100%;
   background-color: #27850e;
-  height: 50px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Home__paddingSemiHeader {
+  /* padding-left: 17%; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1280px;
+  /* padding-right: 17%; */
+  height: 100%;
+}
+
+.semiHeader__title {
+  font-family: "Roboto_Condensed";
+  font-size: 26px;
+  color: #fff;
+}
+
+.contactUs__us {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-family: "open-Sans";
+  font-style: italic;
+  margin-right: 25px;
+}
+
+.contactUs__email {
+  color: #fff;
+  font-size: 12px;
+  font-family: "open-Sans-bold";
+}
+
+.contactUs__semiHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .HomeDetail__container {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  /* width: 66%;
+  padding-left: 17%;
+  padding-right: 17%; */
+  width: 1280px;
   justify-content: space-between;
+}
+
+.main__homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  border-right: 1px solid #27850e;
+}
+
+.main__paddingHome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 8%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.mainImage__setting {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.85) 0px 25px 20px -20px;
+  margin-bottom: 40px;
+}
+
+.crossLine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  text-transform: uppercase;
+  color: #27850e;
+  font-size: 11px;
+  font-family: "open-Sans-bold";
+  letter-spacing: 2px;
+}
+
+.crossLeftLine {
+  background-color: #27850e;
+  height: 1px;
+  width: 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.crossRightLine {
+  width: 40%;
+  height: 1px;
+  background-color: #27850e;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.mission__detail {
+  color: #777777;
+  font-size: 20px;
+  font-family: "Roboto_Condensed_Light";
+}
+
+.viewAllVideos__button {
+  border: none;
+  background-color: #27850e;
+  padding: 3px 7px;
+  color: #fff;
+  font-size: 13px;
+  font-family: "open-Sans-bold";
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.membershipBenefit__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.membershipBenefit__box {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+}
+
+.benefitBox__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.tennisBallImage__setting {
+  width: 41px;
+  height: 41px;
+}
+
+.benefitBox__title p {
+  color: #444444;
+  font-size: 22px;
+  font-family: "Roboto_condensed_light";
+}
+
+.benefitBox__detail {
+  margin-top: 10px;
+}
+
+.benefitBox__detail p {
+  margin-top: 2px;
+  margin-bottom: 3px;
+  font-size: 13px;
+  font-family: "open-Sans-bold";
+  color: #777777;
+}
+
+.tennisFairPlay__url {
+  background-color: #27850e;
+  color: white;
+  font-size: 13px;
+  font-family: "open-Sans-bold";
+  padding: 3px 7px;
+}
+
+.tennisImage__setting {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+.winCupImage__setting {
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1350px) {
+  .HomeDetail__container {
+    width: 1170px;
+    transition: all 0.3s ease;
+  }
+
+  .Home__paddingSemiHeader {
+    width: 1170px;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 1230px) {
+  .HomeDetail__container {
+    width: 970px;
+    transition: all 0.3s ease;
+  }
+
+  .Home__paddingSemiHeader {
+    width: 970px;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 1050px) {
+  .HomeDetail__container {
+    width: 870px;
+    transition: all 0.3s ease;
+  }
+
+  .Home__paddingSemiHeader {
+    width: 870px;
+    transition: all 0.3s ease;
+  }
 }
