@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../CSS/landing.css";
 
-import logoImage from "../../assets/logo.png";
+import logoImage from "../../assets/Site-Logo.png";
 
 const Navbar = () => {
   const [isShrunk, setIsShrunk] = useState(false);
@@ -9,6 +10,7 @@ const Navbar = () => {
 
   const handleTagSelect = (tag) => {
     setSelectedTag(tag);
+    localStorage.setItem("selectedTag", tag);
   };
 
   useEffect(() => {
@@ -35,30 +37,33 @@ const Navbar = () => {
           }
         />
         <div className="Navbar__lists">
-          <p
+          <Link
+            to="/"
             className={`list__setting__basic ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "Home" ? "scale__active" : ""}`}
             onClick={() => handleTagSelect("Home")}
           >
             Home
-          </p>
-          <p
+          </Link>
+          <Link
+            to="/about"
             className={`list__setting__basic ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "About" ? "scale__active" : ""}`}
             onClick={() => handleTagSelect("About")}
           >
             About
-          </p>
-          <p
+          </Link>
+          <Link
+            to="/shop"
             className={`list__setting__basic ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "Shop" ? "scale__active" : ""}`}
             onClick={() => handleTagSelect("Shop")}
           >
             Shop
-          </p>
+          </Link>
           <p
             className={`list__setting__basic ${
               isShrunk ? "list__setting__small" : "list__setting"
