@@ -512,6 +512,35 @@
   transition: all 0.3s ease;
 }
 
+.wheelchair__subtitle {
+  color: #444444;
+  font-size: 18px;
+  font-family: "Roboto_Condensed_Light";
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.wheelchair__referenceSite {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.wheelchair__referenceSite a {
+  margin: 7px 0px;
+  font-size: 13px;
+  font-family: "open-Sans-bold";
+}
+
+.SponsorshipOpportunities__title {
+  color: #444444;
+  font-size: 36px;
+  font-family: "Roboto_Condensed_Light";
+  margin: 10px 0px 25px;
+  width: 100%;
+}
+
 @media (max-width: 1350px) {
   .HomeDetail__container {
     width: 1170px;
