@@ -10,6 +10,7 @@ import JuniorStory from "../JuniorStory";
 import DoubleTennis from "../DoubleTennis";
 import HealthAndWellness from "../HealthAndWellness";
 import SeniorsTennis from "../SeniorsTennis";
+import KidsAndTeensTennis from "../KidsAndTeensTennis";
 
 const Main = () => {
   return (
@@ -33,6 +34,11 @@ const Main = () => {
               element={<HealthAndWellness />}
             />
             <Route exact path="/seniors-tennis" element={<SeniorsTennis />} />
+            <Route
+              exact
+              path="/kids-teens-tennis"
+              element={<KidsAndTeensTennis />}
+            />
           </Routes>
         </main>
       </BrowserRouter>

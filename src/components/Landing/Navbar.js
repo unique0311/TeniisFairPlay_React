@@ -108,8 +108,10 @@ const Navbar = () => {
               <Link to="/seniors-tennis" className="LinkTo_setting">
                 <div>Seniors Tennis</div>
               </Link>
+              <Link to="/kids-teens-tennis" className="LinkTo_setting">
+                <div>Kids & Teens Tennis</div>
+              </Link>
 
-              <div>Kids & Teens Tennis</div>
               <div>Wheelchair Tennis</div>
               <div>Sponsorship Opportunities</div>
               <div>Our Sponsors</div>
