@@ -105,8 +105,10 @@ const Navbar = () => {
               <Link to="/health-and-wellness" className="LinkTo_setting">
                 <div>Health & Wellness</div>
               </Link>
+              <Link to="/seniors-tennis" className="LinkTo_setting">
+                <div>Seniors Tennis</div>
+              </Link>
 
-              <div>Seniors Tennis</div>
               <div>Kids & Teens Tennis</div>
               <div>Wheelchair Tennis</div>
               <div>Sponsorship Opportunities</div>

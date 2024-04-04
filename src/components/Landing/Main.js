@@ -9,6 +9,7 @@ import Shop from "../Shop";
 import JuniorStory from "../JuniorStory";
 import DoubleTennis from "../DoubleTennis";
 import HealthAndWellness from "../HealthAndWellness";
+import SeniorsTennis from "../SeniorsTennis";
 
 const Main = () => {
   return (
@@ -31,6 +32,7 @@ const Main = () => {
               path="/health-and-wellness"
               element={<HealthAndWellness />}
             />
+            <Route exact path="/seniors-tennis" element={<SeniorsTennis />} />
           </Routes>
         </main>
       </BrowserRouter>

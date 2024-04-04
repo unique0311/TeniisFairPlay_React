@@ -400,6 +400,41 @@
   width: 100%;
 }
 
+.SeniorsTennis__title {
+  color: #444444;
+  font-size: 36px;
+  font-family: "Roboto_Condensed_Light";
+  margin: 10px 0px 25px;
+  width: 100%;
+}
+
+.SeniorsTennis__paragraph {
+  color: #777777;
+  font-size: 13px;
+  font-family: "open-Sans-bold";
+  margin: 11.05px 0px;
+  width: 100%;
+}
+
+.seniors__blockQuote {
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: #f7f7f7;
+  display: inline-block;
+}
+
+.seniors__blockQuote p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 0;
+  color: #777777;
+  font-size: 16px;
+  font-family: "open-Sans-bold";
+}
+
 @media (max-width: 1350px) {
   .HomeDetail__container {
     width: 1170px;
