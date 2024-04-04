@@ -35,14 +35,12 @@ nav.scrolled {
   align-items: center;
   transition: all 0.3s ease;
   width: 1280px;
-  /* width: 100%;
-  padding-left: 17%;
-  padding-right: 17%; */
 }
 
 .Navbar__lists {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .list__setting__basic {
@@ -55,6 +53,133 @@ nav.scrolled {
   cursor: pointer;
   color: #444444;
   text-decoration: none;
+}
+
+.navbarImage__setting {
+  margin-right: 12px;
+  margin-left: 12px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+.downImage__setting {
+  width: 9px;
+  height: 9px;
+  margin-left: 5px;
+}
+
+.dropdown__content__basic {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #27850e;
+  width: 200px;
+  left: -15px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown__content {
+  top: 88px;
+}
+
+.dropdown__content__small {
+  top: 44px;
+}
+
+.dropdown__content__small div {
+  color: #171717;
+  padding: 7px 18px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+  font-family: "open-Sans-bold";
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #ced7df55;
+}
+
+.dropdown__content__small div:last-child {
+  border-bottom: none;
+}
+
+.dropdown__content__small div:hover {
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.dropdown__content div {
+  color: #171717;
+  padding: 7px 18px;
+  text-decoration: none;
+  display: flex;
+  font-size: 12px;
+  font-family: "open-Sans-bold";
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #dae1e755;
+}
+
+.dropdown__content div:last-child {
+  border-bottom: none;
+}
+
+.dropdown__content div:hover {
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+}
+
+.community__setting {
+  position: relative;
+}
+
+.members__setting {
+  position: relative;
+}
+
+.tournaments__setting {
+  position: relative;
+}
+
+.community__setting:hover .dropdown__content {
+  display: block;
+}
+
+.community__setting:hover .dropdown__content__small {
+  display: block;
+}
+
+.members__setting:hover .dropdown__content {
+  display: block;
+}
+
+.members__setting:hover .dropdown__content__small {
+  display: block;
+}
+
+.tournaments__setting:hover .dropdown__content {
+  display: block;
+}
+
+.tournaments__setting:hover .dropdown__content__small {
+  display: block;
+}
+
+.membership__awardOnly {
+  flex-direction: row;
+  align-items: center;
+}
+
+.membership__awardOnly img {
+  width: 13px;
+  height: 13px;
+  margin-right: 3px;
+}
+
+.membership__awardOnly p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .list__setting__basic:hover {
@@ -85,7 +210,7 @@ nav.scrolled {
   color: #515151;
   font-size: 13px;
   font-family: "open-Sans-bold";
-  letter-spacing: 1px;
+  letter-spacing: 0.3px;
 }
 
 .Main__container {

@@ -57,9 +57,6 @@
 .HomeDetail__container {
   display: flex;
   flex-direction: row;
-  /* width: 66%;
-  padding-left: 17%;
-  padding-right: 17%; */
   width: 1280px;
   justify-content: space-between;
 }
@@ -78,6 +75,7 @@
   align-items: center;
   padding-right: 8%;
   padding-top: 40px;
+  width: 92%;
   padding-bottom: 40px;
 }
 
@@ -217,6 +215,119 @@
 
 .aboutDetail__list li {
   margin-top: 3px;
+}
+
+.shopMain__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.shopMain__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.shopMain__title p {
+  color: #777777;
+  font-size: 11px;
+  font-family: "open-Sans-bold";
+  margin: 0px 0px 11px;
+}
+
+.shopMain__productList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Product__container {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.productImage__setting {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productInfo__title {
+  margin-top: 3px;
+  margin-bottom: 7px;
+  color: #bbbbbb;
+  font-size: 11.5px;
+  font-family: "open-Sans-bold";
+  text-transform: uppercase;
+}
+
+.productInfo__titleOne {
+  margin-top: 2px;
+  margin-bottom: 3px;
+  color: #444444;
+  font-size: 14px;
+  font-family: "open-Sans-bold";
+  text-transform: uppercase;
+}
+
+.productInfo__titleTwo {
+  margin-top: 2px;
+  margin-bottom: 3px;
+  color: #444444;
+  font-size: 14px;
+  font-family: "open-Sans-bold";
+}
+
+.product__price {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.productPrice__value {
+  color: #444444;
+  font-size: 17px;
+  font-family: "open-Sans-bold";
+  margin-bottom: 5px;
+}
+
+.productPrice__button {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.productPrice__button button {
+  color: #5e5e5e;
+  font-size: 11px;
+  font-family: "open-Sans-bold";
+  background-color: #f7f7f7;
+  padding: 10px;
+  border: 1px solid #8d8d8d;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 50%;
+  text-transform: uppercase;
+}
+
+.productPrice__quickView {
+  color: #777777;
+  font-size: 13px;
+  font-family: "open-Sans";
+  margin-top: 2px;
+  margin-bottom: 0px;
 }
 
 @media (max-width: 1350px) {

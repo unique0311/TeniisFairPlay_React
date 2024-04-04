@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "../CSS/landing.css";
 
 import logoImage from "../../assets/Site-Logo.png";
+import awardImage from "../../assets/award.png";
+import downImage from "../../assets/down.png";
+import searchImage from "../../assets/search.png";
+import cartImage from "../../assets/cart.png";
 
 const Navbar = () => {
   const [isShrunk, setIsShrunk] = useState(false);
@@ -64,30 +68,89 @@ const Navbar = () => {
           >
             Shop
           </Link>
-          <p
-            className={`list__setting__basic ${
+          <div
+            className={`list__setting__basic community__setting ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "Community" ? "scale__active" : ""}`}
-            onClick={() => handleTagSelect("Community")}
+            // onClick={() => handleTagSelect("Community")}
           >
             Community
-          </p>
-          <p
-            className={`list__setting__basic ${
+            <img src={downImage} className="downImage__setting" />
+            <div
+              className={`dropdown__content__basic
+                ${isShrunk ? "dropdown__content__small" : "dropdown__content"}
+              `}
+            >
+              <div className="membership__awardOnly">
+                <img src={awardImage} />
+                News & Announcement
+              </div>
+              <div className="membership__awardOnly">
+                <img src={awardImage} />
+                Photo Gallery
+              </div>
+              <div className="membership__awardOnly">
+                <img src={awardImage} />
+                Video Series
+              </div>
+              <div>Sponsor a Junior</div>
+              <div>Doubles Tennis</div>
+              <div>Health & Wellness</div>
+              <div>Seniors Tennis</div>
+              <div>Kids & Teens Tennis</div>
+              <div>Wheelchair Tennis</div>
+              <div>Sponsorship Opportunities</div>
+              <div>Our Sponsors</div>
+            </div>
+          </div>
+          <div
+            className={`list__setting__basic members__setting ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "Members" ? "scale__active" : ""}`}
-            onClick={() => handleTagSelect("Members")}
+            // onClick={() => handleTagSelect("Members")}
           >
             Members
-          </p>
-          <p
-            className={`list__setting__basic ${
+            <img src={downImage} className="downImage__setting" />
+            <div
+              className={`dropdown__content__basic
+                ${isShrunk ? "dropdown__content__small" : "dropdown__content"}
+              `}
+            >
+              <div className="membership__awardOnly">
+                <img src={awardImage} />
+                Members
+              </div>
+              <div className="membership__awardOnly">
+                <img src={awardImage} />
+                Members Activity Feed
+              </div>
+              <div className="membership__awardOnly">
+                <img src={awardImage} />
+                Member Groups & Clubs
+              </div>
+              <div>Membership Benefits</div>
+              <div>Membership Levels</div>
+            </div>
+          </div>
+          <div
+            className={`list__setting__basic tournaments__setting ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "Tournaments" ? "scale__active" : ""}`}
             onClick={() => handleTagSelect("Tournaments")}
           >
             Tournaments
-          </p>
+            <img src={downImage} className="downImage__setting" />
+            <div
+              className={`dropdown__content__basic
+                ${isShrunk ? "dropdown__content__small" : "dropdown__content"}
+              `}
+            >
+              <div>All Events</div>
+              <div>Adult Non-Ranking</div>
+              <div>Open-NTRP Ranking</div>
+              <div>Senior Ranking</div>
+            </div>
+          </div>
           <p
             className={`list__setting__basic ${
               isShrunk ? "list__setting__small" : "list__setting"
@@ -96,6 +159,8 @@ const Navbar = () => {
           >
             Tennis Courts
           </p>
+          <img src={cartImage} className="navbarImage__setting" />
+          <img src={searchImage} className="navbarImage__setting" />
         </div>
       </div>
     </nav>

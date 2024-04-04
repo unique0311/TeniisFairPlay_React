@@ -1,8 +1,8 @@
 import React from "react";
 import "../components/CSS/home.css";
 
-import aboutImage from "../assets/about.png";
 import Login from "./Login";
+import Product from "./Product";
 
 const Home = () => {
   return (
@@ -18,7 +18,17 @@ const Home = () => {
       </div>
       <div className="HomeDetail__container">
         <div className="main__homeContainer">
-          <div className="main__paddingHome">Shop</div>
+          <div className="main__paddingHome">
+            <div className="shopMain__container">
+              <div className="shopMain__title">
+                <p>showing the single result</p>
+                <p>Default sorting</p>
+              </div>
+              <div className="shopMain__productList">
+                <Product />
+              </div>
+            </div>
+          </div>
         </div>
         <Login />
       </div>
