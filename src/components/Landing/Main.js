@@ -6,6 +6,9 @@ import Home from "../Home";
 import About from "../About";
 import Navbar from "./Navbar";
 import Shop from "../Shop";
+import JuniorStory from "../JuniorStory";
+import DoubleTennis from "../DoubleTennis";
+import HealthAndWellness from "../HealthAndWellness";
 
 const Main = () => {
   return (
@@ -17,6 +20,17 @@ const Main = () => {
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/shop" element={<Shop />} />
+            <Route
+              exact
+              path="/category/junior-stories"
+              element={<JuniorStory />}
+            />
+            <Route exact path="/double-tennis" element={<DoubleTennis />} />
+            <Route
+              exact
+              path="/health-and-wellness"
+              element={<HealthAndWellness />}
+            />
           </Routes>
         </main>
       </BrowserRouter>

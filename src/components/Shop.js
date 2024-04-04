@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../components/CSS/home.css";
 
 import Login from "./Login";
 import Product from "./Product";
 
-const Home = () => {
+const Shop = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedItem, setSelectedItem] = useState("Default Item");
+
+  const DropdownMenu = (item) => {
+    setSelectedItem(item);
+    setIsDropdownOpen(false);
+  };
+
   return (
     <div className="Home__container">
       <div className="semiHeader__container">
@@ -22,7 +30,7 @@ const Home = () => {
             <div className="shopMain__container">
               <div className="shopMain__title">
                 <p>showing the single result</p>
-                <p>Default sorting</p>
+                <p>Dropdown Menu</p>
               </div>
               <div className="shopMain__productList">
                 <Product />
@@ -36,4 +44,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Shop;

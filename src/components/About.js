@@ -2,12 +2,9 @@ import React from "react";
 import "../components/CSS/home.css";
 
 import aboutImage from "../assets/about.png";
-import tennisBallImage from "../assets/tennis_ball_sm.png";
-import tennisImage from "../assets/tennis.png";
-import winCupImage from "../assets/trophy_gold.png";
 import Login from "./Login";
 
-const Home = () => {
+const About = () => {
   return (
     <div className="Home__container">
       <div className="semiHeader__container">
@@ -86,4 +83,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

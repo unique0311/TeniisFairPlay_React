@@ -85,6 +85,10 @@
   margin-bottom: 40px;
 }
 
+.juniorImage__setting {
+  width: 100%;
+}
+
 .crossLine {
   display: flex;
   flex-direction: row;
@@ -328,6 +332,72 @@
   font-family: "open-Sans";
   margin-top: 2px;
   margin-bottom: 0px;
+}
+
+.juniorStories__main {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  width: 100%;
+}
+
+.juniorStories__title {
+  color: #444444;
+  font-family: "Roboto_Condensed_Light";
+  font-size: 22px;
+  margin: 33px 0px 20px;
+}
+
+.juniorStories__detail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: antiquewhite;
+  width: 100%;
+}
+
+.juniorMemberImage__setting {
+  width: 100%;
+}
+
+.juniorMembers__container {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  border: 1px solid #27850e;
+}
+
+.doubleTennis__title {
+  color: #444444;
+  font-size: 28px;
+  font-family: "Roboto_Condensed_Light";
+  margin: 15px 0px;
+  width: 100%;
+}
+
+.healthAndWellness__title {
+  color: #444444;
+  font-size: 36px;
+  font-family: "Roboto_Condensed_Light";
+  margin: 10px 0px 25px;
+  width: 100%;
+}
+
+.healthAndWellness__subTitle {
+  color: #444444;
+  font-size: 28px;
+  font-family: "Roboto_Condensed_Light";
+  margin: 10px 0px 20px;
+  width: 100%;
+}
+
+.healthAndWellness__subSubTitle {
+  color: #444444;
+  font-size: 22px;
+  font-family: "Roboto_Condensed_Light";
+  margin: 20px 0px 0px;
+  width: 100%;
 }
 
 @media (max-width: 1350px) {

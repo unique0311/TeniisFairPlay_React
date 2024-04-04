@@ -10,7 +10,10 @@ import cartImage from "../../assets/cart.png";
 
 const Navbar = () => {
   const [isShrunk, setIsShrunk] = useState(false);
-  const [selectedTag, setSelectedTag] = useState("Home");
+  const [selectedTag, setSelectedTag] = useState(() => {
+    const tags = localStorage.getItem("selectedTag");
+    return tags ? tags : "Home";
+  });
 
   const handleTagSelect = (tag) => {
     setSelectedTag(tag);
@@ -93,9 +96,16 @@ const Navbar = () => {
                 <img src={awardImage} />
                 Video Series
               </div>
-              <div>Sponsor a Junior</div>
-              <div>Doubles Tennis</div>
-              <div>Health & Wellness</div>
+              <Link to="/category/junior-stories" className="LinkTo_setting">
+                <div>Sponsor a Junior</div>
+              </Link>
+              <Link to="/double-tennis" className="LinkTo_setting">
+                <div>Doubles Tennis</div>
+              </Link>
+              <Link to="/health-and-wellness" className="LinkTo_setting">
+                <div>Health & Wellness</div>
+              </Link>
+
               <div>Seniors Tennis</div>
               <div>Kids & Teens Tennis</div>
               <div>Wheelchair Tennis</div>
@@ -136,7 +146,7 @@ const Navbar = () => {
             className={`list__setting__basic tournaments__setting ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "Tournaments" ? "scale__active" : ""}`}
-            onClick={() => handleTagSelect("Tournaments")}
+            // onClick={() => handleTagSelect("Tournaments")}
           >
             Tournaments
             <img src={downImage} className="downImage__setting" />
