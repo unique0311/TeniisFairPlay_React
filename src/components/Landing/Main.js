@@ -15,6 +15,7 @@ import WheelChairTennis from "../WheelChairTennis";
 import SponsorshipOppotunities from "../SponsorshipOpportunities";
 import Sponsors from "../Sponsors";
 import MembershipBenefits from "../MembershipBenefits";
+import MembershipLevels from "../MembershipLevels";
 
 const Main = () => {
   return (
@@ -58,6 +59,11 @@ const Main = () => {
               exact
               path="/membership-benefits"
               element={<MembershipBenefits />}
+            />
+            <Route
+              exact
+              path="/membership-account/membership-levels"
+              element={<MembershipLevels />}
             />
           </Routes>
         </main>

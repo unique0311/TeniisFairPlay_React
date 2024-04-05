@@ -27,10 +27,10 @@ const Login = () => {
         </div>
         <div className="loginInput__container">
           <p>Password</p>
-          <input type="password" />
+          <input type="password" required />
         </div>
         <div className="loginRememberMe__setting">
-          <input type="checkbox" />
+          <input type="checkbox" required />
           <p>Remember Me</p>
         </div>
         <div className="loginButton__container">

@@ -213,8 +213,15 @@ const Navbar = () => {
               >
                 <div>Membership Benefits</div>
               </Link>
-
-              <div>Membership Levels</div>
+              <Link
+                to="/membership-account/membership-levels"
+                className={`LinkTo_setting ${
+                  selectedTag === "MembershipLevels" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("MembershipLevels")}
+              >
+                <div>Membership Levels</div>
+              </Link>
             </div>
           </div>
           <div
