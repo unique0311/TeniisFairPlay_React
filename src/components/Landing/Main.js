@@ -14,6 +14,7 @@ import KidsAndTeensTennis from "../KidsAndTeensTennis";
 import WheelChairTennis from "../WheelChairTennis";
 import SponsorshipOppotunities from "../SponsorshipOpportunities";
 import Sponsors from "../Sponsors";
+import MembershipBenefits from "../MembershipBenefits";
 
 const Main = () => {
   return (
@@ -53,6 +54,11 @@ const Main = () => {
               element={<SponsorshipOppotunities />}
             />
             <Route exact path="/sponsors" element={<Sponsors />} />
+            <Route
+              exact
+              path="/membership-benefits"
+              element={<MembershipBenefits />}
+            />
           </Routes>
         </main>
       </BrowserRouter>

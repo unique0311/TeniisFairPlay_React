@@ -204,7 +204,16 @@ const Navbar = () => {
                 <img src={awardImage} />
                 Member Groups & Clubs
               </div>
-              <div>Membership Benefits</div>
+              <Link
+                to="/membership-benefits"
+                className={`LinkTo_setting ${
+                  selectedTag === "MembershipBenefits" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("MembershipBenefits")}
+              >
+                <div>Membership Benefits</div>
+              </Link>
+
               <div>Membership Levels</div>
             </div>
           </div>

@@ -43,7 +43,15 @@ const Login = () => {
         <div className="LoginReference__name">
           <p>Photo Gallery</p>
           <p>Video Series</p>
-          <p>Membership Benefits</p>
+          <Link
+            to="/membership-benefits"
+            className={`LinkTo_setting ${
+              selectedTag === "MembershipBenefits" ? "LinktoSelected" : ""
+            }`}
+            onClick={() => handleTagSelect("MembershipBenefits")}
+          >
+            <div>Membership Benefits</div>
+          </Link>
           <Link
             to="/sponsorship-opportunities"
             className={`LinkTo_setting ${
