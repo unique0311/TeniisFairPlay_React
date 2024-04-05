@@ -100,9 +100,9 @@ nav.scrolled {
   border-bottom: 1px solid #ced7df55;
 }
 
-.dropdown__content__small div:last-child {
+/* .dropdown__content__small div:last-child {
   border-bottom: none;
-}
+} */
 
 .dropdown__content__small div:hover {
   background-color: #f5f5f5;
@@ -121,9 +121,9 @@ nav.scrolled {
   border-bottom: 1px solid #dae1e755;
 }
 
-.dropdown__content div:last-child {
+/* .dropdown__content div:last-child {
   border-bottom: none;
-}
+} */
 
 .dropdown__content div:hover {
   background-color: #f5f5f5;
@@ -132,6 +132,11 @@ nav.scrolled {
 
 .LinkTo_setting {
   text-decoration: none;
+}
+
+.LinktoSelected {
+  display: flex;
+  background-color: #f5f5f5;
 }
 
 .community__setting {

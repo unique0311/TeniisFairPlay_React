@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../CSS/landing.css";
 
 import logoImage from "../../assets/Site-Logo.png";
@@ -14,6 +14,13 @@ const Navbar = () => {
     const tags = localStorage.getItem("selectedTag");
     return tags ? tags : "Home";
   });
+  const location = useLocation();
+  useEffect(() => {
+    setSelectedTag(() => {
+      const tags = localStorage.getItem("selectedTag");
+      return tags ? tags : "Home";
+    });
+  }, [location]);
 
   const handleTagSelect = (tag) => {
     setSelectedTag(tag);
@@ -96,29 +103,80 @@ const Navbar = () => {
                 <img src={awardImage} />
                 Video Series
               </div>
-              <Link to="/category/junior-stories" className="LinkTo_setting">
+              <Link
+                to="/category/junior-stories"
+                className={`LinkTo_setting ${
+                  selectedTag === "SponsorJunior" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("SponsorJunior")}
+              >
                 <div>Sponsor a Junior</div>
               </Link>
-              <Link to="/double-tennis" className="LinkTo_setting">
+              <Link
+                to="/double-tennis"
+                className={`LinkTo_setting ${
+                  selectedTag === "DoubleTennis" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("DoubleTennis")}
+              >
                 <div>Doubles Tennis</div>
               </Link>
-              <Link to="/health-and-wellness" className="LinkTo_setting">
+              <Link
+                to="/health-and-wellness"
+                className={`LinkTo_setting ${
+                  selectedTag === "HealthAndWellness" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("HealthAndWellness")}
+              >
                 <div>Health & Wellness</div>
               </Link>
-              <Link to="/seniors-tennis" className="LinkTo_setting">
+              <Link
+                to="/seniors-tennis"
+                className={`LinkTo_setting ${
+                  selectedTag === "SeniorsTennis" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("SeniorsTennis")}
+              >
                 <div>Seniors Tennis</div>
               </Link>
-              <Link to="/kids-teens-tennis" className="LinkTo_setting">
+              <Link
+                to="/kids-teens-tennis"
+                className={`LinkTo_setting ${
+                  selectedTag === "KidsAndTeensTennis" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("KidsAndTeensTennis")}
+              >
                 <div>Kids & Teens Tennis</div>
               </Link>
-              <Link to="/wheelchair-tennis" className="LinkTo_setting">
+              <Link
+                to="/wheelchair-tennis"
+                className={`LinkTo_setting ${
+                  selectedTag === "WheelChairTennis" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("WheelChairTennis")}
+              >
                 <div>Wheelchair Tennis</div>
               </Link>
-              <Link to="/sponsorship-opportunities" className="LinkTo_setting">
+              <Link
+                to="/sponsorship-opportunities"
+                className={`LinkTo_setting ${
+                  selectedTag === "SponsorshipOpportunities"
+                    ? "LinktoSelected"
+                    : ""
+                }`}
+                onClick={() => handleTagSelect("SponsorshipOpportunities")}
+              >
                 <div>Sponsorship Opportunities</div>
               </Link>
-
-              <div>Our Sponsors</div>
+              <Link
+                to="/sponsors"
+                className={`LinkTo_setting ${
+                  selectedTag === "OurSponsors" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("OurSponsors")}
+              >
+                <div>Our Sponsors</div>
+              </Link>
             </div>
           </div>
           <div

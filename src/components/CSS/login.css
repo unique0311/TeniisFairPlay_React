@@ -79,6 +79,7 @@
   color: #777777;
   font-family: "open-Sans-bold";
   font-size: 12px;
+  cursor: pointer;
 }
 
 .registerButton {
@@ -89,6 +90,7 @@
   font-family: "open-Sans-bold";
   font-size: 12px;
   border: none;
+  cursor: pointer;
 }
 
 .LoginReference__site {
@@ -109,6 +111,17 @@
 }
 
 .LoginReference__name p {
+  color: #777777;
+  font-size: 12.09px;
+  padding: 10px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "open-Sans";
+  border-bottom: #27850e 1px solid;
+}
+
+.LoginReference__name .LinkTo_setting div {
+  width: 100%;
   color: #777777;
   font-size: 12.09px;
   padding: 10px 0;

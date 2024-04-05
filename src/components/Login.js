@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import "../components/CSS/login.css";
 import facebookImage from "../assets/facebook.png";
 import twitterImage from "../assets/twitter.png";
 
 const Login = () => {
+  const [selectedTag, setSelectedTag] = useState(() => {
+    const tags = localStorage.getItem("selectedTag");
+    return tags ? tags : "";
+  });
+
+  const handleTagSelect = (tag) => {
+    setSelectedTag(tag);
+    localStorage.setItem("selectedTag", tag);
+  };
+
   return (
     <div className="Login__container">
       <p className="loginContainer__title">Become a Member</p>
@@ -33,20 +44,80 @@ const Login = () => {
           <p>Photo Gallery</p>
           <p>Video Series</p>
           <p>Membership Benefits</p>
-          <p>Sponsorship Opportunities</p>
-          <p>Wheelchair Tennis</p>
-          <p>Double Tennis</p>
-          <p>Seniors Tennis</p>
-          <p>Tids & Teens Tennis</p>
-          <p>Health & Wellness</p>
-          <p>Sponsor a Junior</p>
+          <Link
+            to="/sponsorship-opportunities"
+            className={`LinkTo_setting ${
+              selectedTag === "SponsorshipOpportunities" ? "LinktoSelected" : ""
+            }`}
+            onClick={() => handleTagSelect("SponsorshipOpportunities")}
+          >
+            <div>Sponsorship Opportunities</div>
+          </Link>
+          <Link
+            to="/wheelchair-tennis"
+            className={`LinkTo_setting ${
+              selectedTag === "WheelChairTennis" ? "LinktoSelected" : ""
+            }`}
+            onClick={() => handleTagSelect("WheelChairTennis")}
+          >
+            <div>Wheelchair Tennis</div>
+          </Link>
+          <Link
+            to="/double-tennis"
+            className={`LinkTo_setting ${
+              selectedTag === "DoubleTennis" ? "LinktoSelected" : ""
+            }`}
+            onClick={() => handleTagSelect("DoubleTennis")}
+          >
+            <div>Doubles Tennis</div>
+          </Link>
+          <Link
+            to="/seniors-tennis"
+            className={`LinkTo_setting ${
+              selectedTag === "SeniorsTennis" ? "LinktoSelected" : ""
+            }`}
+            onClick={() => handleTagSelect("SeniorsTennis")}
+          >
+            <div>Seniors Tennis</div>
+          </Link>
+          <Link
+            to="/kids-teens-tennis"
+            className={`LinkTo_setting ${
+              selectedTag === "KidsAndTeensTennis" ? "LinktoSelected" : ""
+            }`}
+            onClick={() => handleTagSelect("KidsAndTeensTennis")}
+          >
+            <div>Kids & Teens Tennis</div>
+          </Link>
+          <Link
+            to="/health-and-wellness"
+            className={`LinkTo_setting ${
+              selectedTag === "HealthAndWellness" ? "LinktoSelected" : ""
+            }`}
+            onClick={() => handleTagSelect("HealthAndWellness")}
+          >
+            <div>Health & Wellness</div>
+          </Link>
+          <Link
+            to="/category/junior-stories"
+            className={`LinkTo_setting ${
+              selectedTag === "SponsorJunior" ? "LinktoSelected" : ""
+            }`}
+            onClick={() => handleTagSelect("SponsorJunior")}
+          >
+            <div>Sponsor a Junior</div>
+          </Link>
         </div>
       </div>
       <div className="LoginSocial__site">
         <p>Follow Us:</p>
         <div className="LoginSocial__image">
-          <img src={facebookImage} />
-          <img src={twitterImage} />
+          <a href="http://www.facebook.com/tennisfairplay" target="_blank">
+            <img src={facebookImage} />
+          </a>
+          <a href="http://www.twitter.com/TennisFairplay" target="_blank">
+            <img src={twitterImage} />
+          </a>
         </div>
       </div>
     </div>
