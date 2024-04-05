@@ -453,6 +453,25 @@
   margin-bottom: 40px;
 }
 
+.SponsorshipOppBlock_side {
+  width: 33%;
+  margin-bottom: 40px;
+}
+
+.SponsorOpp__bottomContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.SponsorOpp__bottomLeft {
+  width: 50%;
+}
+
+.sponsor__space {
+  margin-bottom: 50px;
+}
+
 .kidsTeensTennisBlock_side {
   width: 50%;
 }
@@ -463,8 +482,59 @@
   width: 100%;
 }
 
+.SponsorshipOppSide__container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
 .kidsTeensSide__round {
   width: 30%;
+}
+
+.SponsorshipOppSide__round {
+  width: 40%;
+}
+
+.SponsorshipOppSide__round div {
+  margin-top: 10px;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #28850e00;
+  border-radius: 999px;
+  display: block;
+  transition: all 0.5s ease-in-out;
+}
+
+.SponsorshipOppSide__container:hover .SponsorshipOppSide__round div {
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #28850e;
+}
+
+.SponsorshipSide__paragraph {
+  display: flex;
+  flex-direction: column;
+}
+
+.SponsorshipSidePara__title {
+  color: #444444;
+  font-size: 22px;
+  font-family: "Roboto_Condensed_Light";
+  margin: 33px 0px 20px;
+}
+
+.SponsorshipSidePara__details {
+  display: flex;
+  flex-direction: column;
+  color: #777777;
+  font-size: 13px;
+  font-family: "open-Sans-bold";
+  margin: 11.05px 0px;
+}
+
+.SponsorshipSidePara__details p {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .kidsTeensSide__round div {
