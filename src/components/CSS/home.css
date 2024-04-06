@@ -352,7 +352,6 @@
 .juniorStories__main {
   display: flex;
   flex-direction: column;
-  background-color: aqua;
   width: 100%;
 }
 
@@ -368,12 +367,120 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: antiquewhite;
   width: 100%;
 }
 
-.juniorMemberImage__setting {
+.juniorMembers__imageContainer {
+  position: relative;
   width: 100%;
+  height: 100%;
+}
+
+.juniorMemberImage__setting {
+  height: 100%;
+  width: 100%;
+}
+
+.juniorMembers__name {
+  color: #444444;
+  font-size: 22px;
+  font-family: "Roboto_Condensed_Light";
+  text-transform: uppercase;
+  margin: 10px 0 10px;
+  padding: 20px 0 0 10px;
+}
+
+.juniorMembers__address {
+  color: #bbbbbb;
+  font-size: 11.05px;
+  font-family: "open-Sans-bold";
+  margin: 10px 0 5px;
+  padding: 10px 0 0 10px;
+}
+
+.juniorMembers__message {
+  font-size: 11.05px;
+  display: flex;
+  flex-direction: row;
+  color: #bbbbbb;
+  align-items: center;
+  font-family: "open-Sans-bold";
+  margin-left: 10px;
+}
+
+.juniorMembers__message p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.juniorMembers__message img {
+  margin-left: 5px;
+  width: 12px;
+  height: 12px;
+}
+
+.juniorMembers__details {
+  color: #777777;
+  font-size: 13px;
+  font-family: "open-Sans-bold";
+  margin: 11.05px 10px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.juniorMembers__bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1px solid #f7f7f7;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.juniorMembers__likes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.juniorMembers__likes img {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+.juniorMembers__likes p {
+  color: #bbbbbb;
+  font-size: 11.05px;
+  font-family: "open-Sans-bold";
+}
+
+.juniorMembers__bottomReadMore {
+  color: #27850e;
+  font-size: 11.05px;
+  font-family: "open-Sans-bold";
+}
+
+.memberImage__hoverSetting {
+  position: absolute;
+  top: 0;
+  height: 99%;
+  width: 100%;
+  background-color: #33333300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff00;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.memberImage__hoverSetting:hover {
+  background-color: #33333333;
+  color: #fff;
+  transition: all 0.3s ease;
 }
 
 .juniorMembers__container {
