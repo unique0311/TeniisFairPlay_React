@@ -8,8 +8,8 @@ const Shop = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Default Item");
 
-  const DropdownMenu = (item) => {
-    setSelectedItem(item);
+  const handleSelectChange = (e) => {
+    setSelectedItem(e.target.value);
     setIsDropdownOpen(false);
   };
 
@@ -30,7 +30,21 @@ const Shop = () => {
             <div className="shopMain__container">
               <div className="shopMain__title">
                 <p>showing the single result</p>
-                <p>Dropdown Menu</p>
+                <select
+                  id="dropdown"
+                  value={selectedItem}
+                  onChange={handleSelectChange}
+                >
+                  <option value="Default Sorting">Default Sorting</option>
+                  <option value="Sort by popularity">Sort by popularity</option>
+                  <option value="Sort by latest">Sort by latest</option>
+                  <option value="Sort by price: low to high">
+                    Sort by price: low to high
+                  </option>
+                  <option value="Sort by price: hight to low">
+                    Sort by price: hight to low
+                  </option>
+                </select>
               </div>
               <div className="shopMain__productList">
                 <Product />

@@ -67,7 +67,13 @@ const Home = () => {
                     <strong>Discover</strong> Your Tennis DNA
                   </p>
                   <div className="tennisFairPlay__url">
-                    https://dna.tennisfairplay.com
+                    <a
+                      href="https://dna.tennisfairplay.com"
+                      target="_blank"
+                      className="aTag__setting__home"
+                    >
+                      https://dna.tennisfairplay.com
+                    </a>
                   </div>
                   <p>
                     <strong>Assess</strong> Your Strokes

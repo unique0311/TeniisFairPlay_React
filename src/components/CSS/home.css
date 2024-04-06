@@ -133,6 +133,7 @@
   font-family: "open-Sans-bold";
   margin-top: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .membershipBenefit__container {
@@ -243,6 +244,19 @@
   margin: 0px 0px 11px;
 }
 
+.shopMain__title select {
+  border: 1px solid #27850e;
+  width: 190px;
+  color: #777;
+  font-size: 13px;
+  font-family: "open-Sans-bold";
+  padding: 5px 0px 5px 9px;
+}
+
+.shopMain__title select:focus {
+  outline: none;
+}
+
 .shopMain__productList {
   display: flex;
   flex-direction: row;
@@ -267,6 +281,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
 .productInfo__title {
@@ -574,6 +589,17 @@
   transition: all 0.3s ease;
 }
 
+.aTag__setting__home {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.aTag__setting__home:hover {
+  color: #fffc40;
+  transition: all 0.3s ease;
+}
+
 .aTag__setting:hover {
   color: #27850e;
   transition: all 0.3s ease;
@@ -809,6 +835,164 @@
   font-size: 18px;
   font-family: "Roboto_Condensed_Light";
   margin-top: 20px;
+}
+
+.TennisCourts__SearchContainer {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  margin: 20px 0 0;
+  border-top: 1px #e1e1e1 solid;
+  border-bottom: 1px #e1e1e1 solid;
+}
+
+.TennisCourts__searchSubContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 8px;
+  border: solid 1px #e1e1e1;
+}
+
+.TennisCourts__searchMain {
+  width: 42%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #27850e;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+}
+
+.TennisCourts__searchMain input {
+  width: 85%;
+  color: #777777;
+  font-size: 15px;
+  font-family: "open-Sans-bold";
+  border: none;
+}
+
+.TennisCourts__searchMain input:focus {
+  outline: none;
+}
+
+.TennisCourts__searchMain img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.TennisCourts__searchSubContainer button {
+  width: 12%;
+  background-color: #27850e;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 15px;
+  font-family: "open-Sans-bold";
+  padding: 7px 3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.TennisCourts__searchSubContainer button:hover {
+  background-color: #3cc018;
+  color: #f3ff4f;
+  transition: all 0.3s ease;
+}
+
+.TennisCourts__placeContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.TennisCourtCard__container {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.TennisCourts__mainImage {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.TennisCourtCard__titleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.courts__redirectOthersite {
+  width: 17px;
+  height: 17px;
+  margin-left: 5px;
+}
+
+.TennisCourtCard__title {
+  color: #0061b7;
+  font-family: "Roboto_Condensed";
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.TennisCourtCard__title:hover {
+  color: #27850e;
+  transition: all 0.3s ease;
+}
+
+.tennisCourt__ratingContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.tennisCourtRating__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.tennisCourtRating__left img {
+  width: 20px;
+  height: 20px;
+}
+
+.tennisCourt__heartImage {
+  width: 14px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.tennisCourt__detail {
+  color: #777;
+  font-size: 12px;
+  font-family: "open-Sans-bold";
+  width: 100%;
+  position: relative;
+}
+
+.tennisCourt__readMore {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0 0 0;
+  background-image: linear-gradient(to bottom, transparent, #fff);
+  cursor: pointer;
+  color: #0061b7;
 }
 
 @media (max-width: 1350px) {

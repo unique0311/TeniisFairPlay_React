@@ -44,12 +44,14 @@ const Navbar = () => {
   return (
     <nav className={isShrunk ? "scrolled" : ""}>
       <div className="nav__container">
-        <img
-          src={logoImage}
-          className={
-            isShrunk ? "logoImage__setting__small" : "logoImage__setting"
-          }
-        />
+        <Link to="/" onClick={() => handleTagSelect("Home")}>
+          <img
+            src={logoImage}
+            className={
+              isShrunk ? "logoImage__setting__small" : "logoImage__setting"
+            }
+          />
+        </Link>
         <div className="Navbar__lists">
           <Link
             to="/"
@@ -91,18 +93,36 @@ const Navbar = () => {
                 ${isShrunk ? "dropdown__content__small" : "dropdown__content"}
               `}
             >
-              <div className="membership__awardOnly">
-                <img src={awardImage} />
-                News & Announcement
-              </div>
-              <div className="membership__awardOnly">
-                <img src={awardImage} />
-                Photo Gallery
-              </div>
-              <div className="membership__awardOnly">
-                <img src={awardImage} />
-                Video Series
-              </div>
+              <Link
+                to="/membership-account/membership-levels"
+                className={`LinkTo_setting `}
+                onClick={() => handleTagSelect("MembershipLevels")}
+              >
+                <div className="membership__awardOnly">
+                  <img src={awardImage} />
+                  News & Announcement
+                </div>
+              </Link>
+              <Link
+                to="/membership-account/membership-levels"
+                className={`LinkTo_setting `}
+                onClick={() => handleTagSelect("MembershipLevels")}
+              >
+                <div className="membership__awardOnly">
+                  <img src={awardImage} />
+                  Photo Gallery
+                </div>
+              </Link>
+              <Link
+                to="/membership-account/membership-levels"
+                className={`LinkTo_setting `}
+                onClick={() => handleTagSelect("MembershipLevels")}
+              >
+                <div className="membership__awardOnly">
+                  <img src={awardImage} />
+                  Video Series
+                </div>
+              </Link>
               <Link
                 to="/category/junior-stories"
                 className={`LinkTo_setting ${
@@ -192,18 +212,36 @@ const Navbar = () => {
                 ${isShrunk ? "dropdown__content__small" : "dropdown__content"}
               `}
             >
-              <div className="membership__awardOnly">
-                <img src={awardImage} />
-                Members
-              </div>
-              <div className="membership__awardOnly">
-                <img src={awardImage} />
-                Members Activity Feed
-              </div>
-              <div className="membership__awardOnly">
-                <img src={awardImage} />
-                Member Groups & Clubs
-              </div>
+              <Link
+                to="/membership-account/membership-levels"
+                className={`LinkTo_setting `}
+                onClick={() => handleTagSelect("MembershipLevels")}
+              >
+                <div className="membership__awardOnly">
+                  <img src={awardImage} />
+                  Members
+                </div>
+              </Link>
+              <Link
+                to="/membership-account/membership-levels"
+                className={`LinkTo_setting `}
+                onClick={() => handleTagSelect("MembershipLevels")}
+              >
+                <div className="membership__awardOnly">
+                  <img src={awardImage} />
+                  Members Activity Feed
+                </div>
+              </Link>
+              <Link
+                to="/membership-account/membership-levels"
+                className={`LinkTo_setting `}
+                onClick={() => handleTagSelect("MembershipLevels")}
+              >
+                <div className="membership__awardOnly">
+                  <img src={awardImage} />
+                  Member Groups & Clubs
+                </div>
+              </Link>
               <Link
                 to="/membership-benefits"
                 className={`LinkTo_setting ${
@@ -243,14 +281,15 @@ const Navbar = () => {
               <div>Senior Ranking</div>
             </div>
           </div>
-          <p
+          <Link
+            to="/places/category/tennis-courts"
             className={`list__setting__basic ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "TennisCourts" ? "scale__active" : ""}`}
             onClick={() => handleTagSelect("TennisCourts")}
           >
             Tennis Courts
-          </p>
+          </Link>
           <img src={cartImage} className="navbarImage__setting" />
           <img src={searchImage} className="navbarImage__setting" />
         </div>
