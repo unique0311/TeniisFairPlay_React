@@ -262,11 +262,12 @@ const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div
+          <Link
+            to="/events"
             className={`list__setting__basic tournaments__setting ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "Tournaments" ? "scale__active" : ""}`}
-            // onClick={() => handleTagSelect("Tournaments")}
+            onClick={() => handleTagSelect("Tournaments")}
           >
             Tournaments
             <img src={downImage} className="downImage__setting" />
@@ -280,7 +281,7 @@ const Navbar = () => {
               <div>Open-NTRP Ranking</div>
               <div>Senior Ranking</div>
             </div>
-          </div>
+          </Link>
           <Link
             to="/places/category/tennis-courts"
             className={`list__setting__basic ${

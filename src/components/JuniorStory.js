@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 import "../components/CSS/home.css";
 
 import juniorStoryImage from "../assets/sponsoraJunior.png";
@@ -47,7 +48,9 @@ const JuniorStory = () => {
             <div className="juniorStories__main">
               <p className="juniorStories__title">Junior Stories:</p>
               <div className="juniorStories__detail">
-                <JuniorMember />
+                <Fade>
+                  <JuniorMember />
+                </Fade>
               </div>
             </div>
           </div>
