@@ -16,7 +16,7 @@ import "../components/CSS/calendar.css";
 import nextImage from "../assets/next.png";
 import previousImage from "../assets/previous.png";
 
-class Calendar extends React.Component {
+class CalendarEvent extends React.Component {
   state = {
     currentMonth: new Date(),
     selectedDate: new Date(),
@@ -32,11 +32,18 @@ class Calendar extends React.Component {
     return (
       <div className="calendar__header">
         <div className="calendarHeader__year">
-          <span>Events for {format(this.state.currentMonth, dateFormat)}</span>
+          <span>
+            <a href="/events" className="calendarHeader__aTag">
+              Events for {format(this.state.currentMonth, dateFormat)}
+            </a>
+          </span>
+          <span>
+            &nbsp;{`>`}&nbsp;{this.props.EventTitle}
+          </span>
         </div>
         <div className="calendarHeader__MonthsEvent">
           <p className="calendarHeader__eventResultHere">
-            There were no results found.
+            {this.props.EventResultHereText}
           </p>
           <p className="calendarHeader__eventDateHere">
             Events in{" "}
@@ -197,4 +204,4 @@ class Calendar extends React.Component {
   }
 }
 
-export default Calendar;
+export default CalendarEvent;

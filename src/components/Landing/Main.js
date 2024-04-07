@@ -18,6 +18,11 @@ import MembershipBenefits from "../MembershipBenefits";
 import MembershipLevels from "../MembershipLevels";
 import TennisCourts from "../TennisCourts";
 import Tournaments from "../Tournaments";
+import AllEvents from "../AllEvents";
+import AdultNonRanking from "../AdultNonRanking";
+import OpenNTRPRanking from "../OpenNtrpRanking";
+import SeniorRanking from "../SeniorRanking";
+import JuniorNonRanking from "../JuniorNonRanking";
 
 const Main = () => {
   return (
@@ -73,6 +78,31 @@ const Main = () => {
               element={<TennisCourts />}
             />
             <Route exact path="/events" element={<Tournaments />} />
+            <Route
+              exact
+              path="/events/category/all_events"
+              element={<AllEvents />}
+            />
+            <Route
+              exact
+              path="/events/category/adult_non_ranking"
+              element={<AdultNonRanking />}
+            />
+            <Route
+              exact
+              path="/events/category/open_ntrp_ranking"
+              element={<OpenNTRPRanking />}
+            />
+            <Route
+              exact
+              path="/events/category/senior_ranking"
+              element={<SeniorRanking />}
+            />
+            <Route
+              exact
+              path="/events/category/junior_non_ranking"
+              element={<JuniorNonRanking />}
+            />
           </Routes>
         </main>
       </BrowserRouter>

@@ -267,7 +267,7 @@ const Navbar = () => {
             className={`list__setting__basic tournaments__setting ${
               isShrunk ? "list__setting__small" : "list__setting"
             } ${selectedTag === "Tournaments" ? "scale__active" : ""}`}
-            onClick={() => handleTagSelect("Tournaments")}
+            // onClick={() => handleTagSelect("Tournaments")}
           >
             Tournaments
             <img src={downImage} className="downImage__setting" />
@@ -276,10 +276,51 @@ const Navbar = () => {
                 ${isShrunk ? "dropdown__content__small" : "dropdown__content"}
               `}
             >
-              <div>All Events</div>
-              <div>Adult Non-Ranking</div>
-              <div>Open-NTRP Ranking</div>
-              <div>Senior Ranking</div>
+              <Link
+                to="/events/category/all_events"
+                className={`LinkTo_setting ${
+                  selectedTag === "AllEvents" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("AllEvents")}
+              >
+                <div>All Events</div>
+              </Link>
+              <Link
+                to="/events/category/adult_non_ranking"
+                className={`LinkTo_setting ${
+                  selectedTag === "AdultNonRanking" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("AdultNonRanking")}
+              >
+                <div>Adult Non-Ranking</div>
+              </Link>
+              <Link
+                to="/events/category/open_ntrp_ranking"
+                className={`LinkTo_setting ${
+                  selectedTag === "OpenNTRPRanking" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("OpenNTRPRanking")}
+              >
+                <div>Open-NTRP Ranking</div>
+              </Link>
+              <Link
+                to="/events/category/junior_non_ranking"
+                className={`LinkTo_setting ${
+                  selectedTag === "JuniorNonRanking" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("JuniorNonRanking")}
+              >
+                <div>Junior Non-Ranking</div>
+              </Link>
+              <Link
+                to="/events/category/senior_ranking"
+                className={`LinkTo_setting ${
+                  selectedTag === "SeniorRanking" ? "LinktoSelected" : ""
+                }`}
+                onClick={() => handleTagSelect("SeniorRanking")}
+              >
+                <div>Senior Ranking</div>
+              </Link>
             </div>
           </Link>
           <Link
