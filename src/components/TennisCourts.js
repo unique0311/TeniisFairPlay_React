@@ -37,14 +37,17 @@ const TennisCourts = () => {
             </p>
             <div className="TennisCourts__SearchContainer">
               <div className="TennisCourts__searchSubContainer">
-                <div className="TennisCourts__searchMain">
-                  <img src={searchSmallImage} />
-                  <input placeholder="Search for Tennis Court" />
+                <div className="tennisCourts__input">
+                  <div className="TennisCourts__searchMain">
+                    <img src={searchSmallImage} />
+                    <input placeholder="Search for Tennis Court" />
+                  </div>
+                  <div className="TennisCourts__searchMain">
+                    <img src={locationSmallImage} />
+                    <input placeholder="Near" />
+                  </div>
                 </div>
-                <div className="TennisCourts__searchMain">
-                  <img src={locationSmallImage} />
-                  <input placeholder="Near" />
-                </div>
+
                 <button>Search</button>
               </div>
             </div>

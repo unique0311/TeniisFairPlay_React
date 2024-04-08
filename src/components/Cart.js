@@ -29,26 +29,32 @@ const Cart = () => {
                 <span style={{ color: "#bbbbbb" }}>{`>`}</span>
                 <p className="cartTitle__path">order complete</p>
               </div>
-              <div className="cartMain__productTitle">
-                <div className="cartMainProduct__one">&nbsp;</div>
-                <div className="cartMainProduct__two">&nbsp;</div>
-                <div className="cartMainProduct__three">product</div>
-                <div className="cartMainProduct__four">price</div>
-                <div className="cartMainProduct__five">quantity</div>
-                <div className="cartMainProduct__six">subtotal</div>
-              </div>
-              <div className="cartMain__productContainer">
-                <div className="cartMain__productClose">x</div>
-                <div className="cartMain__productImage">
-                  <img src={ProductImage} />
+              <div className="cartMain__proContainer">
+                <div className="cartMain__proContainerScroll">
+                  <div className="cartMain__productTitle">
+                    <div className="cartMainProduct__one">&nbsp;</div>
+                    <div className="cartMainProduct__two">&nbsp;</div>
+                    <div className="cartMainProduct__three">product</div>
+                    <div className="cartMainProduct__four">price</div>
+                    <div className="cartMainProduct__five">quantity</div>
+                    <div className="cartMainProduct__six">subtotal</div>
+                  </div>
+                  <div className="cartMain__productContainer">
+                    <div className="cartMain__productClose">x</div>
+                    <div className="cartMain__productImage">
+                      <img src={ProductImage} />
+                    </div>
+                    <div className="cartMain__productDetail">
+                      NATURE'S DISINFECTANT ANTI-VIRAL PROTECTION SPRAY 8oz
+                      bottles
+                    </div>
+                    <div className="cartMain__productPrice">$29.99</div>
+                    <div className="cartMain__productQuantity">1</div>
+                    <div className="cartMain__productSubtotal">$29.99</div>
+                  </div>
                 </div>
-                <div className="cartMain__productDetail">
-                  NATURE'S DISINFECTANT ANTI-VIRAL PROTECTION SPRAY 8oz bottles
-                </div>
-                <div className="cartMain__productPrice">$29.99</div>
-                <div className="cartMain__productQuantity">1</div>
-                <div className="cartMain__productSubtotal">$29.99</div>
               </div>
+
               <div className="cartMain__buttonContainer">
                 <div className="cartMain__couponContainer">
                   <input placeholder="Coupon code" />
