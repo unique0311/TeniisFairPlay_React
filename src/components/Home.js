@@ -1,13 +1,35 @@
 import React from "react";
 import "../components/CSS/home.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import mainImage from "../assets/main.png";
+import mainTwoImage from "../assets/mainTwo.png";
+import mainThreeImage from "../assets/mainThree.png";
+import mainFourImage from "../assets/mainFour.png";
+import mainFiveImage from "../assets/mainFive.png";
+import mainSixImage from "../assets/mainSix.png";
+import mainSevenImage from "../assets/mainSeven.png";
+
 import tennisBallImage from "../assets/tennis_ball_sm.png";
 import tennisImage from "../assets/tennis.png";
 import winCupImage from "../assets/trophy_gold.png";
 import Login from "./Login";
 
 const Home = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slideToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 10000,
+  };
+
   return (
     <div className="Home__container">
       <div className="semiHeader__container">
@@ -22,7 +44,60 @@ const Home = () => {
       <div className="HomeDetail__container">
         <div className="main__homeContainer">
           <div className="main__paddingHome">
-            <img src={mainImage} className="mainImage__setting" />
+            <div className="mainImage__setting">
+              <Slider {...settings}>
+                <div>
+                  <img
+                    src={mainImage}
+                    alt="Image 1"
+                    className="mainSliderImage__setting"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={mainTwoImage}
+                    alt="Image 2"
+                    className="mainSliderImage__setting"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={mainSevenImage}
+                    alt="Image 3"
+                    className="mainSliderImage__setting"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={mainFiveImage}
+                    alt="Image 4"
+                    className="mainSliderImage__setting"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={mainFourImage}
+                    alt="Image 5"
+                    className="mainSliderImage__setting"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={mainSixImage}
+                    alt="Image 6"
+                    className="mainSliderImage__setting"
+                  />
+                </div>
+                <div>
+                  <img
+                    src={mainThreeImage}
+                    alt="Image 7"
+                    className="mainSliderImage__setting"
+                  />
+                </div>
+              </Slider>
+            </div>
+            {/* <img src={mainImage} className="mainImage__setting" /> */}
             <div className="crossLine">
               <div className="crossLeftLine" />
               <abbr>Our Mission</abbr>

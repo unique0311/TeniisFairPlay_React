@@ -332,7 +332,10 @@ const Navbar = () => {
           >
             Tennis Courts
           </Link>
-          <img src={cartImage} className="navbarImage__setting" />
+          <Link to="/cart" onClick={() => handleTagSelect("Cart")}>
+            <img src={cartImage} className="navbarImage__setting" />
+          </Link>
+
           <img src={searchImage} className="navbarImage__setting" />
         </div>
       </div>

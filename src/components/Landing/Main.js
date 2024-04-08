@@ -23,6 +23,7 @@ import AdultNonRanking from "../AdultNonRanking";
 import OpenNTRPRanking from "../OpenNtrpRanking";
 import SeniorRanking from "../SeniorRanking";
 import JuniorNonRanking from "../JuniorNonRanking";
+import Cart from "../Cart";
 
 const Main = () => {
   return (
@@ -103,6 +104,7 @@ const Main = () => {
               path="/events/category/junior_non_ranking"
               element={<JuniorNonRanking />}
             />
+            <Route exact path="/cart" element={<Cart />} />
           </Routes>
         </main>
       </BrowserRouter>
