@@ -97,7 +97,6 @@ const Home = () => {
                 </div>
               </Slider>
             </div>
-            {/* <img src={mainImage} className="mainImage__setting" /> */}
             <div className="crossLine">
               <div className="crossLeftLine" />
               <abbr>Our Mission</abbr>

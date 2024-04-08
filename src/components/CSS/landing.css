@@ -30,18 +30,32 @@ nav.scrolled {
 }
 
 .nav__container {
+  transition: all 0.3s ease;
+  width: 1280px;
+}
+
+.navbar__mainContainer {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.3s ease;
-  width: 1280px;
 }
 
 .Navbar__lists {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.ResponsiveNavbar__container {
+  display: none;
+}
+
+.cartResImage__setting {
+  width: 23px;
+  height: 23px;
+  margin-right: 10px;
 }
 
 .list__setting__basic {
@@ -278,5 +292,63 @@ nav.scrolled {
   .nav__container {
     transition: all 0.3s ease;
     width: 870px;
+  }
+}
+
+@media (max-width: 990px) {
+  .nav__container {
+    transition: all 0.3s ease;
+    width: 720px;
+  }
+
+  .Navbar__lists {
+    display: none;
+  }
+
+  .ResponsiveNavbar__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hambugar__menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 4px;
+    padding: 9px 10px;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    cursor: pointer;
+  }
+
+  .hambugar__menu div {
+    background-color: #27850e;
+    margin: 4px 0 0;
+    width: 100%;
+    height: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav__container {
+    transition: all 0.3s ease;
+    width: 92%;
+  }
+}
+
+@media (max-width: 450px) {
+  .Footer__container {
+    font-size: 11px;
+  }
+
+  .logoImage__setting {
+    height: 66px;
+  }
+}
+
+@media (max-width: 350px) {
+  .Footer__container {
+    font-size: 8px;
   }
 }

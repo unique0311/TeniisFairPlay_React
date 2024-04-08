@@ -32,6 +32,8 @@
   font-family: "Roboto_Condensed";
   font-size: 26px;
   color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .contactUs__us {
@@ -250,7 +252,11 @@
   margin: 0px 0px 11px;
 }
 
-.shopMain__title select {
+.shopMain__select {
+  display: flex;
+}
+
+.shopMain__select select {
   border: 1px solid #27850e;
   width: 190px;
   color: #777;
@@ -1392,5 +1398,177 @@
   .Home__paddingSemiHeader {
     width: 870px;
     transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 990px) {
+  .HomeDetail__container {
+    width: 720px;
+    transition: all 0.3s ease;
+  }
+
+  .Home__paddingSemiHeader {
+    width: 720px;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 990px) {
+  .HomeDetail__container {
+    width: 720px;
+    transition: all 0.3s ease;
+  }
+
+  .Home__paddingSemiHeader {
+    width: 720px;
+    transition: all 0.3s ease;
+  }
+}
+
+@media (max-width: 768px) {
+  .Home__paddingSemiHeader {
+    width: 92%;
+    transition: all 0.3s ease;
+  }
+
+  .HomeDetail__container {
+    flex-direction: column;
+    width: 92%;
+  }
+
+  .main__homeContainer {
+    width: 100%;
+    border-right: none;
+  }
+
+  .main__paddingHome {
+    width: 100%;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 720px) {
+  .membershipBenefit__container {
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+  }
+
+  .membershipBenefit__box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .tennisFairPlay__url {
+    width: 180px;
+  }
+
+  .slick-slider button.slick-prev {
+    left: 10px;
+  }
+
+  .slick-slider button.slick-next {
+    right: 5px;
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .crossRightLine {
+    width: 30% !important;
+  }
+
+  .crossLeftLine {
+    width: 30% !important;
+  }
+
+  .Product__container {
+    width: 100%;
+  }
+
+  .membershipLevel__container {
+    flex-direction: column;
+  }
+
+  .membershipCard__container {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.85) 3px 16px 15px -17px;
+  }
+
+  .Home__paddingSemiHeader {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .semiHeader__title {
+    margin-top: 5px;
+  }
+
+  .contactUs__semiHeader {
+    margin-bottom: 5px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .contactUs__us {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .contactUs__email {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .juniorMembers__container {
+    width: 100%;
+  }
+
+  .semiHeader__title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 450px) {
+  .crossRightLine {
+    width: 25% !important;
+  }
+
+  .crossLeftLine {
+    width: 25% !important;
+  }
+
+  .shopMain__title {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .shopMain__select {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .SeniorsTennis__title {
+    font-size: 26px;
+  }
+
+  .seniors__blockQuote p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  .semiHeader__title {
+    font-size: 18px;
+  }
+
+  .seniors__blockQuote p {
+    font-size: 13px;
+    line-height: 16px;
+  }
+
+  .SeniorsTennis__title {
+    font-size: 22px;
   }
 }

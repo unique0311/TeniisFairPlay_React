@@ -30,21 +30,25 @@ const Shop = () => {
             <div className="shopMain__container">
               <div className="shopMain__title">
                 <p>showing the single result</p>
-                <select
-                  id="dropdown"
-                  value={selectedItem}
-                  onChange={handleSelectChange}
-                >
-                  <option value="Default Sorting">Default Sorting</option>
-                  <option value="Sort by popularity">Sort by popularity</option>
-                  <option value="Sort by latest">Sort by latest</option>
-                  <option value="Sort by price: low to high">
-                    Sort by price: low to high
-                  </option>
-                  <option value="Sort by price: hight to low">
-                    Sort by price: hight to low
-                  </option>
-                </select>
+                <div className="shopMain__select">
+                  <select
+                    id="dropdown"
+                    value={selectedItem}
+                    onChange={handleSelectChange}
+                  >
+                    <option value="Default Sorting">Default Sorting</option>
+                    <option value="Sort by popularity">
+                      Sort by popularity
+                    </option>
+                    <option value="Sort by latest">Sort by latest</option>
+                    <option value="Sort by price: low to high">
+                      Sort by price: low to high
+                    </option>
+                    <option value="Sort by price: hight to low">
+                      Sort by price: hight to low
+                    </option>
+                  </select>
+                </div>
               </div>
               <div className="shopMain__productList">
                 <Product />
