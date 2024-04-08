@@ -693,7 +693,7 @@
   line-height: 1.4;
 }
 
-.kidsTeensSide__container a {
+.kidsTeensSide__aTag {
   width: 70%;
   margin-top: 20px;
 }
@@ -1411,17 +1411,22 @@
     width: 720px;
     transition: all 0.3s ease;
   }
-}
 
-@media (max-width: 990px) {
-  .HomeDetail__container {
-    width: 720px;
-    transition: all 0.3s ease;
+  .kidsTeensTennis__block {
+    flex-direction: column;
   }
 
-  .Home__paddingSemiHeader {
-    width: 720px;
-    transition: all 0.3s ease;
+  .SponsorshipOppBlock_side {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .SponsorshipOppSide__round {
+    width: 100px;
+  }
+
+  .SponsorshipSide__paragraph {
+    width: calc(100% - 100px);
   }
 }
 
@@ -1527,6 +1532,32 @@
   .semiHeader__title {
     font-size: 22px;
   }
+
+  .kidsTeensTennis__block {
+    flex-direction: column;
+  }
+
+  .kidsTeensTennisBlock_side {
+    width: 100%;
+  }
+
+  .kidsTeensSide__round {
+    width: 100px;
+  }
+
+  .kidsTeensSide__container p {
+    width: calc(100% - 100px);
+    font-size: 28px;
+  }
+
+  .kidsTeensSide__aTag {
+    width: calc(100% - 100px);
+  }
+
+  .kidsBackImage__setting {
+    width: 60%;
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1555,6 +1586,62 @@
   .seniors__blockQuote p {
     font-size: 14px;
     line-height: 18px;
+  }
+
+  .kidsTeensSide__container {
+    flex-direction: column;
+  }
+
+  .kidsTeensSide__round {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .kidsTeensSide__container p {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .kidsTeensSide__aTag {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .SponsorshipOppSide__container {
+    flex-direction: column;
+  }
+
+  .SponsorshipOppSide__round {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .SponsorshipSide__paragraph {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .SponsorshipSidePara__details {
+    width: calc(100% - 10px);
+    margin-left: 10px;
+    justify-content: center;
+  }
+
+  .SponsorOpp__bottomContainer {
+    flex-direction: column;
+  }
+
+  .SponsorshipOpportunities__title {
+    font-size: 28px;
   }
 }
 

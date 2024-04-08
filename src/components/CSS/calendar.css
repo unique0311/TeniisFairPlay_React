@@ -317,3 +317,81 @@ main {
   flex-basis: calc(100% / 7);
   width: calc(100% / 7);
 }
+
+@media (max-width: 990px) {
+  .calendarHeader__MonthsEvent {
+    flex-direction: column;
+  }
+
+  .calendarHeader__eventResultHere {
+    margin-bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .calendarHeader__eventDateHere {
+    margin-top: 0;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .calendar {
+    overflow: hidden;
+    /* overflow-x: scroll; */
+  }
+
+  .calendar__mainContainer {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .calendar__mainScroll {
+    width: 720px;
+  }
+}
+
+@media (max-width: 600px) {
+  .calendarHeader__year {
+    font-size: 26px;
+  }
+
+  .calendarHeader__eventResultHere {
+    font-size: 14px;
+  }
+
+  .calendarHeader__eventDateHere {
+    font-size: 14px;
+  }
+
+  .calendarHeader__monthTitle {
+    font-size: 14px;
+  }
+
+  .calendarHeader__prevNextMonth img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .calendarHeader__year {
+    font-size: 20px;
+  }
+
+  .calendarHeader__eventResultHere {
+    font-size: 12px;
+  }
+
+  .calendarHeader__eventDateHere {
+    font-size: 12px;
+  }
+
+  .calendarHeader__monthTitle {
+    font-size: 12px;
+  }
+
+  .calendarHeader__prevNextMonth img {
+    width: 14px;
+    height: 14px;
+  }
+}

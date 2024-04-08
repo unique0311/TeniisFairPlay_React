@@ -189,8 +189,12 @@ class Calendar extends React.Component {
     return (
       <div className="calendar">
         {this.renderHeader()}
-        {this.renderDays()}
-        {this.renderCells()}
+        <div className="calendar__mainContainer">
+          <div className="calendar__mainScroll">
+            {this.renderDays()}
+            {this.renderCells()}
+          </div>
+        </div>
         {this.renderFooter()}
       </div>
     );

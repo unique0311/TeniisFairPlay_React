@@ -93,7 +93,10 @@ const KidsAndTeensTennis = () => {
                   <div className="kidsTeensSide__round">
                     <div />
                   </div>
-                  <a href="/category/junior-stories">
+                  <a
+                    href="/category/junior-stories"
+                    className="kidsTeensSide__aTag"
+                  >
                     <img
                       src={kidsBackImage}
                       className="kidsBackImage__setting"
