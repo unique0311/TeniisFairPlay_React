@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../components/CSS/home.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -53,13 +54,13 @@ const Home = () => {
                     className="mainSliderImage__setting"
                   />
                 </div>
-                <a href="/tennis-dna">
+                <Link to="/tennis-dna">
                   <img
                     src={mainTwoImage}
                     alt="Image 2"
                     className="mainSliderImage__setting"
                   />
-                </a>
+                </Link>
                 <div>
                   <img
                     src={mainSevenImage}
