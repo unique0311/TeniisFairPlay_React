@@ -10,6 +10,10 @@ import cartImage from "../../assets/cart.png";
 import cartResImage from "../../assets/cart_res.png";
 
 const Navbar = () => {
+  const [isResponsive, setIsResponsive] = useState(false);
+  const [isCommunity, setIsCommunity] = useState(false);
+  const [isMember, setIsMember] = useState(false);
+  const [isTournament, setIsTournament] = useState(false);
   const [isShrunk, setIsShrunk] = useState(false);
   const [selectedTag, setSelectedTag] = useState(() => {
     const tags = localStorage.getItem("selectedTag");
@@ -22,6 +26,25 @@ const Navbar = () => {
       return tags ? tags : "Home";
     });
   }, [location]);
+
+  const toggleResponsiveMenu = () => {
+    setIsCommunity(false);
+    setIsTournament(false);
+    setIsMember(false);
+    setIsResponsive(!isResponsive);
+  };
+
+  const toggleIsCommunity = () => {
+    setIsCommunity(!isCommunity);
+  };
+
+  const toggleIsMembers = () => {
+    setIsMember(!isMember);
+  };
+
+  const toggleIsTournaments = () => {
+    setIsTournament(!isTournament);
+  };
 
   const handleTagSelect = (tag) => {
     setSelectedTag(tag);
@@ -43,9 +66,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={isShrunk ? "scrolled" : ""}>
+    <nav className={` ${isShrunk ? "scrolled" : ""} `}>
       <div className="nav__container">
-        <div className="navbar__mainContainer">
+        <div className={`navbar__mainContainer `}>
           <Link to="/" onClick={() => handleTagSelect("Home")}>
             <img
               src={logoImage}
@@ -344,11 +367,342 @@ const Navbar = () => {
             <Link to="/cart" onClick={() => handleTagSelect("Cart")}>
               <img src={cartResImage} className="cartResImage__setting" />
             </Link>
-            <div className="hambugar__menu">
+            <div
+              className={`hambugar__menu ${isResponsive ? "active" : ""}`}
+              onClick={toggleResponsiveMenu}
+            >
               <div />
               <div />
               <div />
             </div>
+          </div>
+        </div>
+        <div
+          className={`responsiveContainer__nav ${
+            isResponsive ? "navbar__responsive" : ""
+          }`}
+        >
+          {/* <div className="fullpage__container" /> */}
+          <div className="resNavbar__mainContainer">
+            <Link
+              to="/"
+              className="resNavbar__detail"
+              onClick={() => {
+                setIsResponsive(false);
+                handleTagSelect("Home");
+              }}
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="resNavbar__detail"
+              onClick={() => {
+                setIsResponsive(false);
+                handleTagSelect("About");
+              }}
+            >
+              About
+            </Link>
+            <Link
+              to="/shop"
+              className="resNavbar__detail"
+              onClick={() => {
+                setIsResponsive(false);
+                handleTagSelect("Shop");
+              }}
+            >
+              Shop
+            </Link>
+            <div
+              className="resNavbar__detail resNavbar__detailPlus"
+              onClick={() => {
+                toggleIsCommunity();
+                setIsMember(false);
+                setIsTournament(false);
+              }}
+            >
+              <p>Community</p>
+              <div className="resNavbar__plusButton">+</div>
+            </div>
+            <div
+              className={`basic__plusMainContainer ${
+                isCommunity ? "isCommunitySetting" : ""
+              }`}
+            >
+              <Link
+                to="/membership-account/membership-levels"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("MembershipLevels");
+                }}
+              >
+                <img src={awardImage} />
+                <p>News & Announcement</p>
+              </Link>
+              <Link
+                to="/membership-account/membership-levels"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("MembershipLevels");
+                }}
+              >
+                <img src={awardImage} />
+                <p>Photo Gallery</p>
+              </Link>
+              <Link
+                to="/membership-account/membership-levels"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("MembershipLevels");
+                }}
+              >
+                <img src={awardImage} />
+                <p>Video Series</p>
+              </Link>
+              <Link
+                to="/category/junior-stories"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("SponsorJunior");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Sponsor A Junior</p>
+              </Link>
+              <Link
+                to="/double-tennis"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("DoubleTennis");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Double Tennis</p>
+              </Link>
+              <Link
+                to="/health-and-wellness"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("HealthAndWellness");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Health & Wellness</p>
+              </Link>
+              <Link
+                to="/seniors-tennis"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("SeniorsTennis");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Seniors Tennis</p>
+              </Link>
+              <Link
+                to="/kids-teens-tennis"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("KidsAndTeensTennis");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">
+                  Kids & Teens Tennis
+                </p>
+              </Link>
+              <Link
+                to="/wheelchair-tennis"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("WheelChairTennis");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Wheelchair Tennis</p>
+              </Link>
+              <Link
+                to="/sponsorship-opportunities"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("SponsorshipOpportunities");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">
+                  Sponsorship Opportunities
+                </p>
+              </Link>
+              <Link
+                to="/sponsors"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("OurSponsors");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Our Sponsors</p>
+              </Link>
+            </div>
+            <div
+              className="resNavbar__detail resNavbar__detailPlus"
+              onClick={() => {
+                toggleIsMembers();
+                setIsCommunity(false);
+                setIsTournament(false);
+              }}
+            >
+              <p>Members</p>
+              <div className="resNavbar__plusButton">+</div>
+            </div>
+            <div
+              className={`basic__plusMainContainer ${
+                isMember ? "isCommunitySetting" : ""
+              }`}
+            >
+              <Link
+                to="/membership-account/membership-levels"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("MembershipLevels");
+                }}
+              >
+                <img src={awardImage} />
+                <p>Members</p>
+              </Link>
+              <Link
+                to="/membership-account/membership-levels"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("MembershipLevels");
+                }}
+              >
+                <img src={awardImage} />
+                <p>Members Activity Feed</p>
+              </Link>
+              <Link
+                to="/membership-account/membership-levels"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("MembershipLevels");
+                }}
+              >
+                <img src={awardImage} />
+                <p>Member Groups And Clubs</p>
+              </Link>
+              <Link
+                to="/membership-benefits"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("MembershipBenefits");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">
+                  Membership Benefits
+                </p>
+              </Link>
+              <Link
+                to="/membership-account/membership-levels"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("MembershipLevels");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Membership Levels</p>
+              </Link>
+            </div>
+            <Link
+              className="resNavbar__detail resNavbar__detailPlus"
+              onClick={() => {
+                toggleIsTournaments();
+                setIsMember(false);
+                setIsCommunity(false);
+              }}
+            >
+              <p>Tournaments</p>
+              <div className="resNavbar__plusButton">+</div>
+            </Link>
+            <div
+              className={`basic__plusMainContainer ${
+                isTournament ? "isCommunitySetting" : ""
+              }`}
+            >
+              <Link
+                to="/events/category/all_events"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("AllEvents");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">All Events</p>
+              </Link>
+              <Link
+                to="/events/category/adult_non_ranking"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("AdultNonRanking");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Adult Non-Ranking</p>
+              </Link>
+              <Link
+                to="/events/category/open_ntrp_ranking"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("OpenNTRPRanking");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Open-NTRP Ranking</p>
+              </Link>
+              <Link
+                to="/events/category/junior_non_ranking"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("JuniorNonRanking");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">
+                  Junior Non-Ranking
+                </p>
+              </Link>
+              <Link
+                to="/events/category/senior_ranking"
+                className="plusMainContainer__detail"
+                onClick={() => {
+                  setIsResponsive(false);
+                  handleTagSelect("SeniorRanking");
+                }}
+              >
+                <p className="pludMainContainer__pSetting">Senior Ranking</p>
+              </Link>
+            </div>
+            <Link
+              to="/places/category/tennis-courts"
+              className="resNavbar__detail"
+              onClick={() => {
+                setIsResponsive(false);
+                handleTagSelect("TennisCourts");
+              }}
+            >
+              Tennis courts
+            </Link>
+            <input
+              placeholder="Start typing to search..."
+              className="resNavbar__input"
+            />
           </div>
         </div>
       </div>

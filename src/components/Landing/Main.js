@@ -24,6 +24,7 @@ import OpenNTRPRanking from "../OpenNtrpRanking";
 import SeniorRanking from "../SeniorRanking";
 import JuniorNonRanking from "../JuniorNonRanking";
 import Cart from "../Cart";
+import TennisDna from "../TennisDna";
 
 const Main = () => {
   return (
@@ -105,6 +106,7 @@ const Main = () => {
               element={<JuniorNonRanking />}
             />
             <Route exact path="/cart" element={<Cart />} />
+            <Route exact path="/tennis-dna" element={<TennisDna />} />
           </Routes>
         </main>
       </BrowserRouter>

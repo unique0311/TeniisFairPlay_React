@@ -17,7 +17,7 @@ import tennisImage from "../assets/tennis.png";
 import winCupImage from "../assets/trophy_gold.png";
 import Login from "./Login";
 
-const Home = () => {
+const TennisDna = () => {
   const settings = {
     dots: false,
     infinite: true,
@@ -34,7 +34,7 @@ const Home = () => {
     <div className="Home__container">
       <div className="semiHeader__container">
         <div className="Home__paddingSemiHeader">
-          <p className="semiHeader__title">Home</p>
+          <p className="semiHeader__title">Tennis DNA</p>
           <div className="contactUs__semiHeader">
             <p className="contactUs__us">Contact Us</p>
             <p className="contactUs__email">info@tennisfairplay.com</p>
@@ -227,4 +227,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default TennisDna;
