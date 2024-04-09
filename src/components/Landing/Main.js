@@ -34,79 +34,54 @@ const Main = () => {
         <main>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/about" element={<About />} />
-            <Route exact path="/shop" element={<Shop />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/category/junior-stories" element={<JuniorStory />} />
+            <Route path="/double-tennis" element={<DoubleTennis />} />
             <Route
-              exact
-              path="/category/junior-stories"
-              element={<JuniorStory />}
-            />
-            <Route exact path="/double-tennis" element={<DoubleTennis />} />
-            <Route
-              exact
               path="/health-and-wellness"
               element={<HealthAndWellness />}
             />
-            <Route exact path="/seniors-tennis" element={<SeniorsTennis />} />
+            <Route path="/seniors-tennis" element={<SeniorsTennis />} />
+            <Route path="/kids-teens-tennis" element={<KidsAndTeensTennis />} />
+            <Route path="/wheelchair-tennis" element={<WheelChairTennis />} />
             <Route
-              exact
-              path="/kids-teens-tennis"
-              element={<KidsAndTeensTennis />}
-            />
-            <Route
-              exact
-              path="/wheelchair-tennis"
-              element={<WheelChairTennis />}
-            />
-            <Route
-              exact
               path="/sponsorship-opportunities"
               element={<SponsorshipOppotunities />}
             />
-            <Route exact path="/sponsors" element={<Sponsors />} />
+            <Route path="/sponsors" element={<Sponsors />} />
             <Route
-              exact
               path="/membership-benefits"
               element={<MembershipBenefits />}
             />
             <Route
-              exact
               path="/membership-account/membership-levels"
               element={<MembershipLevels />}
             />
             <Route
-              exact
               path="/places/category/tennis-courts"
               element={<TennisCourts />}
             />
-            <Route exact path="/events" element={<Tournaments />} />
+            <Route path="/events" element={<Tournaments />} />
+            <Route path="/events/category/all_events" element={<AllEvents />} />
             <Route
-              exact
-              path="/events/category/all_events"
-              element={<AllEvents />}
-            />
-            <Route
-              exact
               path="/events/category/adult_non_ranking"
               element={<AdultNonRanking />}
             />
             <Route
-              exact
               path="/events/category/open_ntrp_ranking"
               element={<OpenNTRPRanking />}
             />
             <Route
-              exact
               path="/events/category/senior_ranking"
               element={<SeniorRanking />}
             />
             <Route
-              exact
               path="/events/category/junior_non_ranking"
               element={<JuniorNonRanking />}
             />
-            <Route exact path="/cart" element={<Cart />} />
-            <Route exact path="/tennis-dna" element={<TennisDna />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/tennis-dna" element={<TennisDna />} />
           </Routes>
         </main>
       </BrowserRouter>
