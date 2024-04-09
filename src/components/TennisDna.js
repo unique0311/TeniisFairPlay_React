@@ -46,21 +46,7 @@ const TennisDna = () => {
           <div className="main__paddingHome">
             <div className="mainImage__setting">
               <Slider {...settings}>
-                <div>
-                  <img
-                    src={mainImage}
-                    alt="Image 1"
-                    className="mainSliderImage__setting"
-                  />
-                </div>
-                <a href="/tennis-dna">
-                  <img
-                    src={mainTwoImage}
-                    alt="Image 2"
-                    className="mainSliderImage__setting"
-                  />
-                </a>
-                <div>
+                <div className="fadeImage__container">
                   <img
                     src={mainSevenImage}
                     alt="Image 3"
@@ -81,144 +67,89 @@ const TennisDna = () => {
                     className="mainSliderImage__setting"
                   />
                 </div>
-                <div>
-                  <img
-                    src={mainSixImage}
-                    alt="Image 6"
-                    className="mainSliderImage__setting"
-                  />
-                </div>
-                <div>
-                  <img
-                    src={mainThreeImage}
-                    alt="Image 7"
-                    className="mainSliderImage__setting"
-                  />
-                </div>
               </Slider>
             </div>
-            <div className="crossLine">
-              <div className="crossLeftLine" />
-              <abbr>Our Mission</abbr>
-              <div className="crossRightLine" />
-            </div>
-            <p className="mission__detail">
-              <strong>Tennis FairPlay</strong> enhances your tennis experience
-              by discovering your Tennis DNA and sharing comments and
-              information through an interactive platform which provides members
-              direct access to fellow tennis players. Tennis FairPlay advocates
-              fairness with a playfair governance. As a community partner,
-              Tennis FairPlay’s mandate is to increase tennis participation and
-              introduce the sport of tennis to non players by reaching out to
-              people with disabilities, youths, adults and seniors adopting
-              healthier lifestyle choices.
-            </p>
-            <div className="crossLine">
-              <div className="crossLeftLine" />
-              <abbr>video series</abbr>
-              <div className="crossRightLine" />
-            </div>
-            <button className="viewAllVideos__button">View All Videos</button>
-            <div className="crossLine">
-              <div className="crossLeftLine" style={{ width: "35%" }} />
-              <abbr>membership benefits</abbr>
-              <div className="crossRightLine" style={{ width: "35%" }} />
-            </div>
-            <div className="membershipBenefit__container">
-              <div className="membershipBenefit__box">
-                <div className="benefitBox__title">
-                  <img
-                    src={tennisBallImage}
-                    className="tennisBallImage__setting"
-                  />
-                  <p>Become A Member</p>
-                </div>
-                <div className="benefitBox__detail">
-                  <p>
-                    <strong>Create</strong> Your Player Profile
-                  </p>
-                  <p>
-                    <strong>Discover</strong> Your Tennis DNA
-                  </p>
-                  <div className="tennisFairPlay__url">
-                    <a
-                      href="https://dna.tennisfairplay.com"
-                      target="_blank"
-                      className="aTag__setting__home"
-                    >
-                      https://dna.tennisfairplay.com
-                    </a>
-                  </div>
-                  <p>
-                    <strong>Assess</strong> Your Strokes
-                  </p>
-                  <p>
-                    <strong>Receive</strong> Your Tennis RairPlay Membership
-                  </p>
-                  <p>
-                    <strong>Review</strong> Your Member Benefits
-                  </p>
-                </div>
+            <div className="tennisDna__crossLine" />
+            <div className="tennisDna__detailsContainer">
+              <div className="tennisDna__title">What is Tennis DNA?</div>
+              <p className="aboutDetail__firstpart">
+                Tennis FairPlay provides a rating system for players based on
+                skill levels, tournament history and sportsmanship. Your Tennis
+                DNA is captured by the essential and most critical elements of
+                your tennis game such as;
+              </p>
+              <div className="membershipB__becomeStep">
+                <p>•Forehand</p>
+                <p>•Backhand</p>
+                <p>•Serve</p>
+                <p>•Net Play</p>
+                <p>•Return of Serve</p>
+                <p>•Lob</p>
+                <p>•Athleticism</p>
+                <p>•Court Ethics</p>
+                <p>•Match Play</p>
               </div>
+              <p className="aboutDetail__firstpart">
+                Players must complete their profile by rating each of the above
+                mentioned elements. The system has a combination of 64 million
+                unique images designed to create your personalized Player’s DNA.
+                This description combined with comments provided by opponents
+                allows Tennis FairPlay to provide the most accurate rating for
+                each player. The individual strands, or DNA Breakdown is colour
+                coded and can be modified as your tennis skills develop changing
+                your DNA outcome and overall tennis rating.
+              </p>
+              <div className="tennisDna__title">
+                How to Discover Your Tennis DNA?
+              </div>
+              <p className="aboutDetail__firstpart">
+                Your Tennis profile also enables Tennis Fairplay to establish
+                your Tennis DNA. Your Tennis DNA is the overall description of
+                your genetic makeup used in the development and functioning of
+                your overall tennis game. Tennis fairplay will provide you with
+                a picture of your Tennis DNA which will be personalized and will
+                change as your game develops. Your Tennis DNA is an ongoing
+                interactive profile designed to give you and your opponents the
+                most accurate measure of your tennis skills today.
+              </p>
+              <div className="tennisDna__title">How to Become a Member?</div>
 
-              <div className="membershipBenefit__box">
-                <div className="benefitBox__title">
-                  <img src={tennisImage} className="tennisImage__setting" />
-                  <p>Participate</p>
-                </div>
-                <div className="benefitBox__detail">
-                  <p>
-                    <strong>Find</strong> a Compatible Match
-                  </p>
-                  <p>
-                    <strong>Check</strong> Tennis Even Canlendar
-                  </p>
-                  <p>
-                    <strong>Comment/Share</strong> because We Care
-                  </p>
-                  <p>
-                    <strong>Connect/Interact</strong> with Players, Clubs,
-                    Groups & Associations
-                  </p>
-                  <p>
-                    <strong>Juniors</strong> Send us your Story
-                  </p>
-                </div>
-              </div>
-
-              <div className="membershipBenefit__box">
-                <div className="benefitBox__title">
-                  <img src={winCupImage} className="winCupImage__setting" />
-                  <p>Win!</p>
-                </div>
-                <div className="benefitBox__detail">
-                  <p>
-                    <strong>Instant</strong> Draw Entry
-                  </p>
-                  <p>
-                    <strong>Monthly</strong> Prizes
-                  </p>
-                  <p>
-                    <strong>Create</strong> New Friendships
-                  </p>
-                  <p>
-                    <strong>Sponsorship</strong> Opportunities
-                  </p>
-                  <p>
-                    <strong>Partake</strong> in an Interactive Global Tennis
-                    Community
-                  </p>
-                </div>
+              <div className="membershipB__becomeStep">
+                <p>
+                  <strong>Step1:</strong> Visit out Website:{" "}
+                  <a
+                    href="https://www.tennisfairplay.com"
+                    className="aTag__setting"
+                    target="_block"
+                  >
+                    www.tennisfairplay.com
+                  </a>
+                </p>
+                <p>
+                  <strong>Step2:</strong> Click Become a Member
+                </p>
+                <p>
+                  <strong>Step3:</strong> Create an Account
+                </p>
+                <p>
+                  <strong>Step4:</strong> Complete your Player Profile
+                </p>
+                <p>
+                  <strong>Step5:</strong> Check your email to confirm and
+                  activate your account
+                </p>
+                <p>
+                  <strong>Step6:</strong> Click on your Member Login Name
+                </p>
+                <p>
+                  <strong>Step7:</strong> Click Profile
+                </p>
+                <p>
+                  <strong>Step8:</strong> Scroll down to Discover your Tennis
+                  DNA
+                </p>
               </div>
             </div>
-            <div className="crossLine">
-              <div className="crossLeftLine" />
-              <abbr>photo gallery</abbr>
-              <div className="crossRightLine" />
-            </div>
-            <button className="viewAllVideos__button">
-              View All Photo Albums
-            </button>
           </div>
         </div>
         <Login />
