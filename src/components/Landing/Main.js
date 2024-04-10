@@ -25,6 +25,7 @@ import SeniorRanking from "../SeniorRanking";
 import JuniorNonRanking from "../JuniorNonRanking";
 import Cart from "../Cart";
 import TennisDna from "../TennisDna";
+import RedirectWallet from "../RedirectWallet";
 
 const Main = () => {
   return (
@@ -82,6 +83,7 @@ const Main = () => {
             />
             <Route path="/cart" element={<Cart />} />
             <Route path="/tennis-dna" element={<TennisDna />} />
+            <Route path="/wallet-import" element={<RedirectWallet />} />
           </Routes>
         </main>
       </BrowserRouter>

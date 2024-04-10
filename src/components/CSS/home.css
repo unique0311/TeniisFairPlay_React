@@ -1387,6 +1387,111 @@
   font-weight: 700;
 }
 
+.howToBuy__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #b19e9e; */
+  align-items: center;
+}
+
+.howToBuy__MainTitle {
+  color: #444444;
+  font-size: 36px;
+  font-family: "roboto_Condensed";
+  /* margin-bottom: 10px; */
+}
+
+.howToBuy__guideStep {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  border: 3px solid #cfcfcf;
+  background-color: #f7f7f7;
+  border-radius: 0 30px 0 30px;
+  box-shadow: inset 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.howToBuy__imageSetting {
+  width: 25%;
+}
+
+.howToBuy__imageSettingSingle {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.howToBuy__imageSettingSingle img {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 70%;
+}
+
+.howToBuy__imageSetting img {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 80%;
+}
+
+.howToBuyGuide__textPart {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  padding-right: 5px;
+}
+
+.howToBuyGuide__textMainTitle {
+  font-size: 23px;
+  font-family: "open-Sans-bold";
+  font-weight: 900;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #27850e;
+}
+
+.howToBuyGuide__textMainDetail {
+  font-size: 14px;
+  font-family: "open-Sans-bold";
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #777777;
+}
+
+.redirectWallet__container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e5e5e5;
+}
+
+.redirectWallet__mainTitle {
+  color: #777777;
+  font-size: 36px;
+}
+
+.redirectWallet__installTitle {
+  color: #777777;
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+.redirectWallet__clickHereTitle {
+  color: #777;
+  margin-top: 0;
+  font-size: 24px;
+}
+
 @media (max-width: 1350px) {
   .HomeDetail__container {
     width: 1170px;
@@ -1450,6 +1555,18 @@
   .SponsorshipSide__paragraph {
     width: calc(100% - 100px);
   }
+
+  .redirectWallet__mainTitle {
+    font-size: 32px;
+  }
+
+  .redirectWallet__installTitle {
+    font-size: 26px;
+  }
+
+  .redirectWallet__clickHereTitle {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1471,6 +1588,18 @@
   .main__paddingHome {
     width: 100%;
     padding-right: 0px;
+  }
+
+  .redirectWallet__mainTitle {
+    font-size: 24px;
+  }
+
+  .redirectWallet__installTitle {
+    font-size: 20px;
+  }
+
+  .redirectWallet__clickHereTitle {
+    font-size: 18px;
   }
 }
 
@@ -1614,6 +1743,18 @@
 
   .cartMain__proContainerScroll {
     width: 600px;
+  }
+
+  .redirectWallet__mainTitle {
+    font-size: 20px;
+  }
+
+  .redirectWallet__installTitle {
+    font-size: 16px;
+  }
+
+  .redirectWallet__clickHereTitle {
+    font-size: 14px;
   }
 }
 

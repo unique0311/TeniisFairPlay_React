@@ -1,17 +1,19 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { ethers } from "ethers";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Web3Provider } from "@ethersproject/providers";
 
 import "../components/CSS/login.css";
 import facebookImage from "../assets/facebook.png";
 import twitterImage from "../assets/twitter.png";
 import ShortenedWord from "./ShortenedWord.js";
-import copyImage from "../assets/copy.png";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [provider, setProvider] = useState(null);
-  const [address, setAddress] = useState("");
+  const [address, setAddress] = useState(() => {
+    const addr = localStorage.getItem("walletAddress");
+    return addr ? addr : "";
+  });
 
   const [selectedTag, setSelectedTag] = useState(() => {
     const tags = localStorage.getItem("selectedTag");
@@ -30,7 +32,7 @@ const Login = () => {
         const newProvider = new Web3Provider(window.ethereum);
         setProvider(newProvider);
 
-        // Request access to the user's MetaMask account
+        // Request access to th e user's MetaMask account
         await window.ethereum.request({ method: "eth_requestAccounts" });
 
         // Get the signer (user's account) from the provider
@@ -41,10 +43,12 @@ const Login = () => {
         const connectedAddress = await signer.getAddress();
 
         setAddress(connectedAddress);
+        localStorage.setItem("walletAddress", connectedAddress);
         console.log("Connected with address:", connectedAddress);
         // You can now use the signer to send transactions, interact with contracts, etc.
       } else {
         console.error("MetaMask extension not detected");
+        navigate("/wallet-import");
       }
     } catch (error) {
       console.error("Error connecting wallet:", error);
@@ -56,12 +60,33 @@ const Login = () => {
       // Reset the provider and signer
       setProvider(null);
       setAddress("");
+      localStorage.removeItem("walletAddress");
       // Logic to clean up any other wallet-related state or data
       // For example, resetting the user's address or balance
     } catch (error) {
       console.error("Error disconnecting wallet:", error);
     }
   };
+
+  useEffect(() => {
+    const handleDisconnect = () => {
+      disconnectWallet();
+    };
+
+    if (window.ethereum) {
+      window.ethereum.on("accountsChanged", handleDisconnect);
+    }
+
+    return () => {
+      if (window.ethereum) {
+        window.ethereum.off("accountsChanged", handleDisconnect);
+      }
+    };
+  }, []);
+
+  window.addEventListener("beforeunload", () => {
+    window.localStorage.removeItem("walletAddress");
+  });
 
   return (
     <div className="Login__container">

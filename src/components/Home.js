@@ -17,6 +17,7 @@ import tennisBallImage from "../assets/tennis_ball_sm.png";
 import tennisImage from "../assets/tennis.png";
 import winCupImage from "../assets/trophy_gold.png";
 import Login from "./Login";
+import BuyToken from "./BuyToken";
 
 const Home = () => {
   const settings = {
@@ -114,6 +115,12 @@ const Home = () => {
               people with disabilities, youths, adults and seniors adopting
               healthier lifestyle choices.
             </p>
+            <div className="crossLine">
+              <div className="crossLeftLine" />
+              <abbr>How to buy</abbr>
+              <div className="crossRightLine" />
+            </div>
+            <BuyToken />
             <div className="crossLine">
               <div className="crossLeftLine" />
               <abbr>video series</abbr>
