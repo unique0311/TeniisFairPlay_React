@@ -1756,6 +1756,10 @@
   .redirectWallet__clickHereTitle {
     font-size: 14px;
   }
+
+  .appUniswapImage__setting {
+    width: 100%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -1840,6 +1844,22 @@
 
   .SponsorshipOpportunities__title {
     font-size: 28px;
+  }
+
+  .howToBuy__guideStep {
+    flex-direction: column;
+  }
+
+  .howToBuy__imageSetting {
+    width: 50%;
+  }
+  .howToBuyGuide__textPart {
+    width: 85%;
+    align-items: center;
+  }
+
+  .howToBuy__MainTitle {
+    font-size: 24px;
   }
 }
 

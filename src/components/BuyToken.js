@@ -6,6 +6,7 @@ import walletImage from "../assets/wallet.webp";
 import ethereumImage from "../assets/ethereum.webp";
 import uniSwapImage from "../assets/uniswap.webp";
 import swapImage from "../assets/swap.png";
+import appUniSwapImage from "../assets/appUniswap.png";
 
 const BuyToken = () => {
   const SlowTextDisplay = ({ text }) => {
@@ -94,6 +95,7 @@ const BuyToken = () => {
           </div>
         </div>
       </Fade>
+      <img src={appUniSwapImage} className="appUniswapImage__setting" />
     </div>
   );
 };
