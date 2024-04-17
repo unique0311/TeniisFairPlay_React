@@ -318,6 +318,20 @@ main {
   width: calc(100% / 7);
 }
 
+.eventInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.eventDetail {
+  font-family: "open-Sans-bold";
+  font-size: 12px;
+  margin-left: 20px;
+}
+
 @media (max-width: 990px) {
   .calendarHeader__MonthsEvent {
     flex-direction: column;

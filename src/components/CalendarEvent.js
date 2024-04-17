@@ -20,6 +20,23 @@ class CalendarEvent extends React.Component {
   state = {
     currentMonth: new Date(),
     selectedDate: new Date(),
+    events: [
+      {
+        date: "2024-04-10",
+        title: "Meeting",
+        description: "Discuss project timeline",
+      },
+      {
+        date: "2024-04-11",
+        title: "Lunch with Sarah",
+        description: "12:00 PM at the Italian restaurant",
+      },
+      {
+        date: "2024-04-11",
+        title: "Lunch with dfah",
+        description: "12:00 PM at the Italian restaurant",
+      },
+    ],
   };
 
   renderHeader() {
@@ -121,6 +138,14 @@ class CalendarEvent extends React.Component {
     return <div className="days row">{days}</div>;
   }
 
+  getEventForDay(day) {
+    const { events } = this.state;
+    const eventsForDay = events.filter((event) =>
+      isSameDay(new Date(event.date), day)
+    );
+    return eventsForDay;
+  }
+
   renderCells() {
     const { currentMonth, selectedDate } = this.state;
     const monthStart = startOfMonth(currentMonth);
@@ -138,6 +163,7 @@ class CalendarEvent extends React.Component {
     while (day <= endDate) {
       for (let i = 0; i < 7; i++) {
         formattedDate = format(day, dateFormat);
+        const eventsForDay = this.getEventForDay(day);
         // const cloneDay = day;
         days.push(
           <div
@@ -159,6 +185,15 @@ class CalendarEvent extends React.Component {
             }}
           >
             <span className="number">{formattedDate}</span>
+            {eventsForDay.length > 0 && (
+              <div className="eventInfo">
+                {eventsForDay.map((e) => (
+                  <div key={e.title} className="eventDetail">
+                    • {e.title}
+                  </div>
+                ))}
+              </div>
+            )}
             <span className="bg">{formattedDate}</span>
           </div>
         );

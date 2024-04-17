@@ -95,7 +95,9 @@ const BuyToken = () => {
           </div>
         </div>
       </Fade>
-      <img src={appUniSwapImage} className="appUniswapImage__setting" />
+      <Fade>
+        <img src={appUniSwapImage} className="appUniswapImage__setting" />
+      </Fade>
     </div>
   );
 };

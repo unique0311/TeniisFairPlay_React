@@ -4,17 +4,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import mainImage from "../assets/main.png";
-import mainTwoImage from "../assets/mainTwo.png";
-import mainThreeImage from "../assets/mainThree.png";
 import mainFourImage from "../assets/mainFour.png";
 import mainFiveImage from "../assets/mainFive.png";
-import mainSixImage from "../assets/mainSix.png";
 import mainSevenImage from "../assets/mainSeven.png";
 
-import tennisBallImage from "../assets/tennis_ball_sm.png";
-import tennisImage from "../assets/tennis.png";
-import winCupImage from "../assets/trophy_gold.png";
 import Login from "./Login";
 
 const TennisDna = () => {
